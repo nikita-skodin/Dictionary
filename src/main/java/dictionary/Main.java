@@ -1,4 +1,4 @@
-package firstApplication;
+package dictionary;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,7 +14,7 @@ import java.io.InputStream;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\resources\\first.fxml").toURI().toURL());
+        Parent root = FXMLLoader.load(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml").toURI().toURL());
         Scene scene = new Scene(root, 600, 400);
         stage.setTitle("Dictionary");
         InputStream iconStream = Main.class.getResourceAsStream("/images/img.png");
@@ -22,6 +22,7 @@ public class Main extends Application {
             Image image = new Image(iconStream);
             stage.getIcons().add(image);
         }
+        iconStream.close();
         stage.setScene(scene);
         stage.show();
     }

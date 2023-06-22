@@ -1,4 +1,4 @@
-package firstApplication;
+package dictionary.logInStage;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class SecondController {
+public class LogInController {
 
     @FXML
     private ResourceBundle resources;
@@ -21,30 +21,27 @@ public class SecondController {
     private URL location;
 
     @FXML
-    private TextField SecondFieldMail;
+    private Button firstButtonLogIn;
 
     @FXML
-    private Button secondButtonLogIn;
+    private Button firstButtonSignIn;
 
     @FXML
-    private Button secondButtonSignIn;
+    private TextField firstPasswordField;
 
     @FXML
-    private TextField secondPasswordField;
-
-    @FXML
-    private TextField secondUsernameField;
+    private TextField firstUsernameField;
 
     @FXML
     void initialize() {
 
-        secondButtonSignIn.setOnAction( actionEvent -> {
-            secondButtonSignIn.getScene().getWindow().hide();
+        firstButtonSignIn.setOnAction( actionEvent -> {
+            firstButtonLogIn.getScene().getWindow().hide();
 
             FXMLLoader fxmlLoader = new FXMLLoader();
 
             try {
-                fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\resources\\first.fxml").toURI().toURL());
+                fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\signInStage\\signIn.fxml").toURI().toURL());
                 fxmlLoader.load();
                 Parent root = fxmlLoader.getRoot();
                 Stage stage = new Stage();

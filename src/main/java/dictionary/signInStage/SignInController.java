@@ -1,8 +1,7 @@
-package firstApplication;
+package dictionary.signInStage;
 
 import java.io.File;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -13,7 +12,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-public class FirstController {
+public class SignInController {
 
     @FXML
     private ResourceBundle resources;
@@ -22,27 +21,30 @@ public class FirstController {
     private URL location;
 
     @FXML
-    private Button firstButtonLogIn;
+    private TextField SecondFieldMail;
 
     @FXML
-    private Button firstButtonSignIn;
+    private Button secondButtonLogIn;
 
     @FXML
-    private TextField firstPasswordField;
+    private Button secondButtonSignIn;
 
     @FXML
-    private TextField firstUsernameField;
+    private TextField secondPasswordField;
+
+    @FXML
+    private TextField secondUsernameField;
 
     @FXML
     void initialize() {
 
-        firstButtonSignIn.setOnAction( actionEvent -> {
-            firstButtonLogIn.getScene().getWindow().hide();
+        secondButtonSignIn.setOnAction( actionEvent -> {
+            secondButtonSignIn.getScene().getWindow().hide();
 
             FXMLLoader fxmlLoader = new FXMLLoader();
 
             try {
-                fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\resources\\second.fxml").toURI().toURL());
+                fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml").toURI().toURL());
                 fxmlLoader.load();
                 Parent root = fxmlLoader.getRoot();
                 Stage stage = new Stage();

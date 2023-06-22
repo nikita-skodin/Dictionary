@@ -3,6 +3,12 @@ module maindir.fxtest5 {
     requires javafx.fxml;
 
 
-    opens firstApplication to javafx.fxml;
-    exports firstApplication;
+    opens dictionary to javafx.fxml;
+    exports dictionary;
+    exports dictionary.logInStage;
+    opens dictionary.logInStage to javafx.fxml;
+    exports dictionary.mainMenuStage;
+    opens dictionary.mainMenuStage to javafx.fxml;
+    exports dictionary.signInStage;
+    opens dictionary.signInStage to javafx.fxml;
 }
