@@ -45,18 +45,7 @@ public class SignInController {
 
         secondButtonSignIn.setOnAction( actionEvent -> {
 
-            FXMLLoader fxmlLoader = new FXMLLoader();
-
-            try {
-                fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml").toURI().toURL());
-                fxmlLoader.load();
-                Parent root = fxmlLoader.getRoot();
-
-                currentStage.setScene(new Scene(root, 600, 400));
-                currentStage.show();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
+            LogInController.methodShow();
         });
 
     }

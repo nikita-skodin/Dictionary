@@ -16,13 +16,12 @@ import java.io.InputStream;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws Exception {
-        LogInController.setCurrentStage(stage);
-        SignInController.setCurrentStage(stage);
 
         LogInController logInController = LogInController.methodInit(stage);
-        LogInController.methodShow();
         SignInController signInController = SignInController.methodInit(stage);
-        SignInController.methodShow();
+        LogInController.methodShow();
+
+
         System.out.println(logInController);
         System.out.println(signInController);
     }
