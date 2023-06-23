@@ -15,17 +15,16 @@ import java.io.InputStream;
 
 public class Main extends Application {
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) throws Exception {
         LogInController.setCurrentStage(stage);
         SignInController.setCurrentStage(stage);
 
-        Parent root = FXMLLoader.load(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml").toURI().toURL());
-        Scene scene = new Scene(root, 600, 400);
-        loadImage(stage);
-        stage.setTitle("Dictionary");
-
-        stage.setScene(scene);
-        stage.show();
+        LogInController logInController = LogInController.methodInit(stage);
+        LogInController.methodShow();
+        SignInController signInController = SignInController.methodInit(stage);
+        SignInController.methodShow();
+        System.out.println(logInController);
+        System.out.println(signInController);
     }
 
     public static void main(String[] args) {

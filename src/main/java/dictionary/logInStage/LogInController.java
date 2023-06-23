@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 public class LogInController {
 
     private static Stage currentStage;
+    private static Scene currentScene;
 
     @FXML
     private ResourceBundle resources;
@@ -56,5 +57,26 @@ public class LogInController {
 
     public static void setCurrentStage(Stage currentStage) {
         LogInController.currentStage = currentStage;
+    }
+
+    public static LogInController methodInit(Stage stage) throws Exception{
+        currentStage = stage;
+        LogInController logInController;
+        FXMLLoader fxmlLoader = new FXMLLoader();
+
+        fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml").toURI().toURL());
+        fxmlLoader.load();
+        logInController = fxmlLoader.getController();
+        Parent root = fxmlLoader.getRoot();
+
+        Scene scene = new Scene(root, 600, 400);
+
+        currentScene = scene;
+        return logInController;
+    }
+
+    public static void methodShow(){
+        currentStage.setScene(currentScene);
+        currentStage.show();
     }
 }
