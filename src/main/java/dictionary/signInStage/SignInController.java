@@ -1,23 +1,26 @@
 package dictionary.signInStage;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dictionary.AbstractController;
 import dictionary.logInStage.LogInController;
+import dictionary.mainMenuStage.MainMenuController;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
-public class SignInController {
+public class SignInController extends AbstractController {
 
-    private static Stage currentStage;
-    private static Scene currentScene;
+    private static SignInController signInController;
+
+    public SignInController() throws Exception {
+
+        if (signInController != null) {
+            throw new Exception();
+        }
+        signInController = this;
+    }
 
     @FXML
     private ResourceBundle resources;
@@ -26,48 +29,33 @@ public class SignInController {
     private URL location;
 
     @FXML
-    private TextField SecondFieldMail;
+    private TextField fieldMail;
 
     @FXML
-    private Button secondButtonLogIn;
+    private Button buttonLogIn;
 
     @FXML
-    private Button secondButtonSignIn;
+    private Button buttonSignIn;
 
     @FXML
-    private TextField secondPasswordField;
+    private TextField passwordField;
 
     @FXML
-    private TextField secondUsernameField;
+    private TextField usernameField;
 
     @FXML
     void initialize() {
 
-        secondButtonSignIn.setOnAction( actionEvent -> {
-
+        buttonLogIn.setOnAction(actionEvent -> {
             LogInController.methodShow();
         });
 
+        buttonSignIn.setOnAction(actionEvent -> {MainMenuController.methodShow();});
+
     }
 
-    public static SignInController methodInit(Stage stage) throws Exception{
-        currentStage = stage;
-        SignInController signInController;
-        FXMLLoader fxmlLoader = new FXMLLoader();
-
-        fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\signInStage\\signIn.fxml").toURI().toURL());
-        fxmlLoader.load();
-        signInController = fxmlLoader.getController();
-        Parent root = fxmlLoader.getRoot();
-
-        Scene scene = new Scene(root, 600, 400);
-
-        currentScene = scene;
-        return signInController ;
-    }
-
-    public static void methodShow(){
-        currentStage.setScene(currentScene);
-        currentStage.show();
+    public static void methodShow() {
+        signInController.currentStage.setScene(signInController.currentScene);
+        signInController.currentStage.show();
     }
 }

@@ -1,24 +1,26 @@
 package dictionary.logInStage;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dictionary.AbstractController;
 import dictionary.mainMenuStage.MainMenuController;
 import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 
-public class LogInController {
+public class LogInController extends AbstractController {
 
-    private static Stage currentStage;
-    private static Scene currentScene;
+    private static LogInController logInController;
+
+    public LogInController() throws Exception {
+
+        if (logInController != null){
+            throw new Exception();
+        }
+        logInController = this;
+    }
 
     @FXML
     private ResourceBundle resources;
@@ -27,45 +29,26 @@ public class LogInController {
     private URL location;
 
     @FXML
-    private Button firstButtonLogIn;
+    private Button buttonLogIn;
 
     @FXML
-    private Button firstButtonSignIn;
+    private Button buttonSignIn;
 
     @FXML
-    private TextField firstPasswordField;
+    private TextField passwordField;
 
     @FXML
-    private TextField firstUsernameField;
+    private TextField usernameField;
 
     @FXML
     void initialize() {
+        buttonSignIn.setOnAction(actionEvent -> {SignInController.methodShow();});
 
-        firstButtonSignIn.setOnAction( actionEvent -> {SignInController.methodShow();});
-
-        firstButtonSignIn.setOnAction(actionEvent -> {
-            MainMenuController.methodShow();
-        });
-    }
-
-    public static LogInController methodInit(Stage stage) throws Exception{
-        currentStage = stage;
-        LogInController logInController;
-        FXMLLoader fxmlLoader = new FXMLLoader();
-
-        fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml").toURI().toURL());
-        fxmlLoader.load();
-        logInController = fxmlLoader.getController();
-        Parent root = fxmlLoader.getRoot();
-
-        Scene scene = new Scene(root, 600, 400);
-
-        currentScene = scene;
-        return logInController;
+        buttonLogIn.setOnAction(actionEvent -> {MainMenuController.methodShow();});
     }
 
     public static void methodShow(){
-        currentStage.setScene(currentScene);
-        currentStage.show();
+        logInController.currentStage.setScene(logInController.currentScene);
+        logInController.currentStage.show();
     }
 }

@@ -11,15 +11,15 @@
     <children>
         <AnchorPane layoutY="121.0" prefHeight="279.0" prefWidth="600.0" style="-fx-background-color: #d6d4ce;">
             <children>
-                <TextField fx:id="secondUsernameField" layoutX="75.0" layoutY="26.0" prefHeight="38.0" prefWidth="305.0" promptText="Username" />
-                <TextField fx:id="secondPasswordField" layoutX="75.0" layoutY="87.0" prefHeight="38.0" prefWidth="305.0" promptText="Password" />
-                <Button fx:id="secondButtonSignIn" graphicTextGap="5.0" layoutX="75.0" layoutY="214.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #d9ba62;" text="Sign in" textAlignment="CENTER" textFill="#693f3f">
+                <TextField fx:id="usernameField" layoutX="75.0" layoutY="26.0" prefHeight="38.0" prefWidth="305.0" promptText="Username" />
+                <TextField fx:id="passwordField" layoutX="75.0" layoutY="87.0" prefHeight="38.0" prefWidth="305.0" promptText="Password" />
+                <Button fx:id="buttonSignIn" graphicTextGap="5.0" layoutX="75.0" layoutY="214.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #d9ba62;" text="Sign in" textAlignment="CENTER" textFill="#693f3f">
                     <font>
                         <Font size="15.0" />
                     </font>
                 </Button>
                 <Line endX="-3.5999755859375" endY="109.4000244140625" layoutX="458.0" layoutY="120.0" startX="-3.5999755859375" startY="-89.00001525878906" stroke="#d9ba62" />
-            <TextField fx:id="SecondFieldMail" layoutX="75.0" layoutY="151.0" prefHeight="38.0" prefWidth="305.0" promptText="Mail" />
+            <TextField fx:id="fieldMail" layoutX="75.0" layoutY="151.0" prefHeight="38.0" prefWidth="305.0" promptText="Mail" />
             </children>
         </AnchorPane>
         <Label layoutX="234.0" layoutY="33.0" prefHeight="58.0" prefWidth="132.0" text="Sign in" textAlignment="CENTER" textFill="WHITE">
@@ -27,7 +27,7 @@
                 <Font size="38.0" />
             </font>
         </Label>
-        <Button fx:id="secondButtonLogIn" graphicTextGap="5.0" layoutX="475.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #d9ba62;" text="Log in" textAlignment="CENTER" textFill="#693f3f">
+        <Button fx:id="buttonLogIn" graphicTextGap="5.0" layoutX="475.0" layoutY="17.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #d9ba62;" text="Log in" textAlignment="CENTER" textFill="#693f3f">
             <font>
                 <Font size="15.0" />
             </font>
