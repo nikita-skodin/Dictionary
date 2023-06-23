@@ -14,6 +14,8 @@ import javafx.stage.Stage;
 
 public class SignInController {
 
+    private static Stage currentStage;
+
     @FXML
     private ResourceBundle resources;
 
@@ -39,7 +41,6 @@ public class SignInController {
     void initialize() {
 
         secondButtonSignIn.setOnAction( actionEvent -> {
-            secondButtonSignIn.getScene().getWindow().hide();
 
             FXMLLoader fxmlLoader = new FXMLLoader();
 
@@ -47,10 +48,9 @@ public class SignInController {
                 fxmlLoader.setLocation(new File("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml").toURI().toURL());
                 fxmlLoader.load();
                 Parent root = fxmlLoader.getRoot();
-                Stage stage = new Stage();
 
-                stage.setScene(new Scene(root));
-                stage.showAndWait();
+                currentStage.setScene(new Scene(root, 600, 400));
+                currentStage.show();
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
@@ -58,4 +58,7 @@ public class SignInController {
 
     }
 
+    public static void setCurrentStage(Stage currentStage) {
+        SignInController.currentStage = currentStage;
+    }
 }
