@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import dictionary.mainMenuStage.MainMenuController;
 import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -40,15 +41,11 @@ public class LogInController {
     @FXML
     void initialize() {
 
-        firstButtonSignIn.setOnAction( actionEvent -> {
+        firstButtonSignIn.setOnAction( actionEvent -> {SignInController.methodShow();});
 
-            SignInController.methodShow();
-
+        firstButtonSignIn.setOnAction(actionEvent -> {
+            MainMenuController.methodShow();
         });
-    }
-
-    public static void setCurrentStage(Stage currentStage) {
-        LogInController.currentStage = currentStage;
     }
 
     public static LogInController methodInit(Stage stage) throws Exception{

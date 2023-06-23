@@ -50,10 +50,6 @@ public class SignInController {
 
     }
 
-    public static void setCurrentStage(Stage currentStage) {
-        SignInController.currentStage = currentStage;
-    }
-
     public static SignInController methodInit(Stage stage) throws Exception{
         currentStage = stage;
         SignInController signInController;
