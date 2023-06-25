@@ -4,20 +4,26 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
+import dictionary.Main;
 import dictionary.mainMenuStage.MainMenuController;
 import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class LogInController extends AbstractController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(LogInController.class);
+
     private static LogInController logInController;
 
-    public LogInController() throws Exception {
+    public LogInController() {
 
         if (logInController != null){
-            throw new Exception();
+            LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
+            throw new RuntimeException();
         }
         logInController = this;
     }
@@ -42,7 +48,9 @@ public class LogInController extends AbstractController {
 
     @FXML
     void initialize() {
-        buttonSignIn.setOnAction(actionEvent -> {SignInController.methodShow();});
+        buttonSignIn.setOnAction(actionEvent -> {
+            SignInController.methodShow();
+        });
 
         buttonLogIn.setOnAction(actionEvent -> {MainMenuController.methodShow();});
     }

@@ -4,20 +4,26 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
+import dictionary.Main;
 import dictionary.logInStage.LogInController;
 import dictionary.mainMenuStage.MainMenuController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class SignInController extends AbstractController {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(SignInController.class);
+
     private static SignInController signInController;
 
-    public SignInController() throws Exception {
+    public SignInController() {
 
         if (signInController != null) {
-            throw new Exception();
+            LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
+            throw new RuntimeException();
         }
         signInController = this;
     }

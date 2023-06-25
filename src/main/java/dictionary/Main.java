@@ -13,14 +13,17 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
+
+import org.slf4j.*;
+
 
 public class Main extends Application {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     private Stage stage;
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage stage) {
         this.stage = stage;
 
         setStageOptions(stage);
@@ -28,35 +31,40 @@ public class Main extends Application {
 
         LogInController.methodShow();
 
+
+
     }
 
     public static void main(String[] args) {
+        LOGGER.info("main method was starting");
         launch();
+        LOGGER.info("main method was done");
     }
 
-    public void setStageOptions(Stage stage){
+    public void setStageOptions(Stage stage) {
         stage.setResizable(false);
         stage.setTitle("Dictionary");
-        try {
-            loadImage(stage);
-        } catch (IOException e) {
-            System.out.println("error in loadImage");
-        }
+        loadImage(stage);
     }
 
-    public void loadControllers() throws Exception {
+    public void loadControllers() {
         createControllers(LogInController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml");
         createControllers(SignInController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\signInStage\\signIn.fxml");
         createControllers(MainMenuController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\mainMenuStage\\mainMenu.fxml");
     }
 
-    public <T extends AbstractController> T  createControllers(Class<T> type, String s) throws IOException {
+    public <T extends AbstractController> T createControllers(Class<T> type, String s) {
 
         T controller;
         FXMLLoader fxmlLoader = new FXMLLoader();
 
-        fxmlLoader.setLocation(new File(s).toURI().toURL());
-        fxmlLoader.load();
+        try {
+            fxmlLoader.setLocation(new File(s).toURI().toURL());
+            fxmlLoader.load();
+        } catch (IOException e) {
+            LOGGER.error("URL or path to FXML is not found, application was close, message is: " + e.getMessage());
+            throw new RuntimeException(e);
+        }
         controller = fxmlLoader.getController();
         controller.setCurrentStage(stage);
         Parent root = fxmlLoader.getRoot();
@@ -68,14 +76,16 @@ public class Main extends Application {
 
     }
 
-    public void loadImage(Stage stage) throws IOException {
+    public void loadImage(Stage stage) {
         try (InputStream iconStream = Main.class.getResourceAsStream("/images/img.png")) {
             if (iconStream != null) {
                 Image image = new Image(iconStream);
                 stage.getIcons().add(image);
-            }else {
-                System.out.println("image is absent");
+            } else {
+                LOGGER.info("stream in loadImage is null, image did not upload");
             }
+        } catch (IOException e) {
+            LOGGER.error("error in loadImage, message is: " + e.getMessage());
         }
     }
 }

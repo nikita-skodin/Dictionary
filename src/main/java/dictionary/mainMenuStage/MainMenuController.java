@@ -1,26 +1,26 @@
 package dictionary.mainMenuStage;
 
-import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
-import dictionary.logInStage.LogInController;
+import dictionary.Main;
+import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class MainMenuController extends AbstractController {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MainMenuController.class);
 
     private static MainMenuController mainMenuController;
 
-    public MainMenuController() throws Exception {
+    public MainMenuController() {
 
         if (mainMenuController != null){
-            throw new Exception();
+            LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
+            throw new RuntimeException();
         }
         mainMenuController = this;
     }

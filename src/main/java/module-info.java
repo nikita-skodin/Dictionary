@@ -1,6 +1,8 @@
 module maindir.fxtest5 {
     requires javafx.controls;
     requires javafx.fxml;
+    requires org.apache.logging.log4j.slf4j;
+    requires slf4j.api;
 
 
     opens dictionary to javafx.fxml;
