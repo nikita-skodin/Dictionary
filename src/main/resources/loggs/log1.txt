@@ -1,0 +1,4 @@
+2023-06-25 17:34:51.795 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 17:35:02.581 [main] INFO  dictionary.Main - main method was done
+2023-06-25 17:36:58.944 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 17:37:01.285 [main] INFO  dictionary.Main - main method was done
