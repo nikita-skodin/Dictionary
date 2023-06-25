@@ -4,9 +4,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
-import dictionary.Main;
+import dictionary.User;
 import dictionary.logInStage.LogInController;
-import dictionary.mainMenuStage.MainMenuController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -35,7 +34,7 @@ public class SignInController extends AbstractController {
     private URL location;
 
     @FXML
-    private TextField fieldMail;
+    private TextField mailField;
 
     @FXML
     private Button buttonLogIn;
@@ -56,7 +55,19 @@ public class SignInController extends AbstractController {
             LogInController.methodShow();
         });
 
-        buttonSignIn.setOnAction(actionEvent -> {MainMenuController.methodShow();});
+        buttonSignIn.setOnAction(actionEvent -> {
+            String username = usernameField.getText().trim();
+            String password = passwordField.getText().trim();
+            String mail = mailField.getText().trim();
+
+            // TODO: 025 реализовать проверку на корректность всех введенных данных
+
+            User user = new User(username, password, mail);
+
+            System.out.println(user);
+
+            LogInController.methodShow();}
+        );
 
     }
 
