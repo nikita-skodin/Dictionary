@@ -1,5 +1,6 @@
 package dictionary;
 
+import dictionary.exceptionMessage.ExceptionMessageController;
 import dictionary.logInStage.LogInController;
 import dictionary.mainMenuStage.MainMenuController;
 import dictionary.signInStage.SignInController;
@@ -51,6 +52,7 @@ public class Main extends Application {
         createControllers(LogInController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml");
         createControllers(SignInController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\signInStage\\signIn.fxml");
         createControllers(MainMenuController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\mainMenuStage\\mainMenu.fxml");
+//        createControllers(ExceptionMessageController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\exceptionMessage\\exceptionMessage.fxml");
     }
 
     public <T extends AbstractController> T createControllers(Class<T> type, String s) {

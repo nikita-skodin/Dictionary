@@ -1,6 +1,9 @@
 package dictionary.signInStage;
 
+import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
@@ -56,23 +59,71 @@ public class SignInController extends AbstractController {
         });
 
         buttonSignIn.setOnAction(actionEvent -> {
-            String username = usernameField.getText().trim();
-            String password = passwordField.getText().trim();
-            String mail = mailField.getText().trim();
+            User user;
+            while (true) {
+                String username = usernameField.getText().trim();
+                String password = passwordField.getText().trim();
+                String mail = mailField.getText().trim();
 
-            // TODO: 025 реализовать проверку на корректность всех введенных данных
+                // TODO: 025 реализовать проверку на корректность всех введенных данных
 
-            User user = new User(username, password, mail);
+                if (!usernameValidator(username)){
+                    System.out.println("Uncorrected username");
+                    break;
+                }
 
-            System.out.println(user);
+                if (!passwordValidator(password)){
+                    System.out.println("Uncorrected password");
+                    break;
+                }
 
-            LogInController.methodShow();}
-        );
+                if (!mailValidator(mail)){
+                    System.out.println("Uncorrected mail address");
+                    break;
+                }
+
+                user = new User(username, password, mail);
+
+                if (isUserExist(user)){
+                    System.out.println("User is exist");
+                    break;
+                }
+
+                try {
+                    User.addUser(user);
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                LogInController.methodShow();
+                usernameField.setText(null);
+                passwordField.setText(null);
+                mailField.setText(null);
+                break;
+            }
+        });
 
     }
 
     public static void methodShow() {
         signInController.currentStage.setScene(signInController.currentScene);
         signInController.currentStage.show();
+    }
+
+    private boolean usernameValidator(String s){
+        return !s.equals("");
+    }
+
+    private boolean passwordValidator(String s){
+        return s.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9@#$%]).{8,}");
+    }
+
+    private boolean mailValidator(String s){
+        return s.matches("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+                + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$");
+    }
+
+    private boolean isUserExist(User user){
+        return Files.exists(Paths.get(String.format("src/main/resources/usersData/%s", user.getUserName()+user.getPassword()+".json")));
     }
 }

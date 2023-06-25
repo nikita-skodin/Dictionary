@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
 import dictionary.Main;
+import dictionary.User;
 import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -12,6 +13,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MainMenuController extends AbstractController {
+    private User currentUser;
     private static final Logger LOGGER = LoggerFactory.getLogger(MainMenuController.class);
 
     private static MainMenuController mainMenuController;

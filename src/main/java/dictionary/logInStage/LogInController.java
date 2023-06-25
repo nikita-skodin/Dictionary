@@ -4,6 +4,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
+import dictionary.User;
 import dictionary.mainMenuStage.MainMenuController;
 import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
@@ -51,7 +52,19 @@ public class LogInController extends AbstractController {
             SignInController.methodShow();
         });
 
-        buttonLogIn.setOnAction(actionEvent -> {MainMenuController.methodShow();});
+        buttonLogIn.setOnAction(actionEvent -> {
+
+            String username = usernameField.getText().trim();
+            String password = passwordField.getText().trim();
+
+            User user = User.getUser(username, password);
+
+            if (user != null){
+                MainMenuController.methodShow();
+            }
+
+
+        });
     }
 
     public static void methodShow(){

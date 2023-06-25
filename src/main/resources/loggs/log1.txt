@@ -20,3 +20,49 @@
 2023-06-25 17:52:53.298 [main] INFO  dictionary.Main - main method was done
 2023-06-25 17:53:02.729 [main] INFO  dictionary.Main - main method was starting
 2023-06-25 17:53:10.838 [main] INFO  dictionary.Main - main method was done
+2023-06-25 18:18:26.291 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 18:18:34.772 [main] INFO  dictionary.Main - main method was done
+2023-06-25 18:25:57.296 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 18:26:06.066 [main] INFO  dictionary.Main - main method was done
+2023-06-25 19:16:42.045 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 19:16:46.444 [main] INFO  dictionary.Main - main method was done
+2023-06-25 19:16:54.946 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 19:18:05.020 [main] INFO  dictionary.Main - main method was done
+2023-06-25 19:19:46.035 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 19:19:56.447 [main] INFO  dictionary.Main - main method was done
+2023-06-25 19:29:35.962 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 19:30:25.153 [main] INFO  dictionary.Main - main method was done
+2023-06-25 19:30:30.253 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 19:31:00.110 [main] INFO  dictionary.Main - main method was done
+2023-06-25 20:25:45.037 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 20:26:14.435 [main] INFO  dictionary.Main - main method was done
+2023-06-25 20:26:18.989 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 20:27:03.293 [main] INFO  dictionary.Main - main method was done
+2023-06-25 20:27:30.349 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 20:27:51.607 [main] INFO  dictionary.Main - main method was done
+2023-06-25 20:28:26.530 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 20:28:52.048 [main] INFO  dictionary.Main - main method was done
+2023-06-25 20:29:26.844 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 20:29:36.230 [main] INFO  dictionary.Main - main method was done
+2023-06-25 20:32:21.953 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 20:33:39.418 [main] INFO  dictionary.Main - main method was done
+2023-06-25 21:07:36.215 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:07:58.726 [main] INFO  dictionary.Main - main method was done
+2023-06-25 21:20:04.509 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:22:49.003 [main] INFO  dictionary.Main - main method was done
+2023-06-25 21:36:59.375 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:36:59.733 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/logIn.fxml:8
+
+2023-06-25 21:39:35.334 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:39:35.389 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: C:\Users\dmitr\Desktop\mainjavaprojects\FXtest5\src\main\java\dictionary\logInStage\exceptionMessage.fxml (Не удается найти указанный файл)
+2023-06-25 21:40:29.300 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:40:29.364 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: C:\Users\dmitr\Desktop\mainjavaprojects\FXtest5\src\main\java\dictionary\logInStage\exceptionMessage.fxml (Не удается найти указанный файл)
+2023-06-25 21:41:18.107 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:41:29.298 [main] INFO  dictionary.Main - main method was done
+2023-06-25 21:41:38.080 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:41:38.426 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:8
+
+2023-06-25 21:42:05.781 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:42:14.683 [main] INFO  dictionary.Main - main method was done
