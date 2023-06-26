@@ -9,13 +9,9 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-
 public class ExceptionMessageController extends AbstractController {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(ExceptionMessageController.class);
-
     private static ExceptionMessageController exceptionMessageController;
-
     public ExceptionMessageController() {
 
         if (exceptionMessageController != null){
@@ -25,10 +21,8 @@ public class ExceptionMessageController extends AbstractController {
         exceptionMessageController = this;
     }
 
-
     @FXML
     private Button buttonOk;
-
     @FXML
     private Text text;
 
@@ -36,20 +30,17 @@ public class ExceptionMessageController extends AbstractController {
     void initialize() {
 
         buttonOk.setOnAction(actionEvent -> {
-
             Stage stage = (Stage) buttonOk.getScene().getWindow();
-
             stage.close();
-
         });
 
     }
 
-    public static void setTextOnButton(String s){
+    public static void setText(String s){
         exceptionMessageController.text.setText(s);
     }
 
-    public static void methodShow(){
+    public static void showScene(){
         Stage stage = new Stage();
         Main.setStageOptions(stage, "Error");
         stage.setScene(exceptionMessageController.currentScene);

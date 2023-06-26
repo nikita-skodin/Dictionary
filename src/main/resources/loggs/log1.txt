@@ -176,3 +176,30 @@
 2023-06-26 12:53:22.878 [main] INFO  dictionary.Main - main method was done
 2023-06-26 18:51:35.376 [main] INFO  dictionary.Main - main method was starting
 2023-06-26 18:51:43.983 [main] INFO  dictionary.Main - main method was done
+2023-06-26 18:54:06.127 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 18:54:11.793 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:01:29.363 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:01:29.719 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:10
+
+2023-06-26 19:01:37.126 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:01:39.031 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:06:38.212 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:06:41.122 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:06:48.950 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:06:51.375 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:12:39.707 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:12:56.497 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:13:54.545 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:14:33.269 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:20:01.898 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:20:09.701 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:20:39.042 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:21:10.306 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:21:19.450 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:21:25.084 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:21:32.571 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:30:12.157 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:30:24.457 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:30:38.955 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:30:42.472 [main] INFO  dictionary.Main - main method was done

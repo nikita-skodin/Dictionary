@@ -15,11 +15,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LogInController extends AbstractController {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(LogInController.class);
-
     private static LogInController logInController;
-
     public LogInController() {
 
         if (logInController != null){
@@ -50,34 +47,35 @@ public class LogInController extends AbstractController {
     @FXML
     void initialize() {
         buttonSignIn.setOnAction(actionEvent -> {
-            SignInController.methodShow();
+            SignInController.showScene();
         });
 
         buttonLogIn.setOnAction(actionEvent -> {
-
-            String username = usernameField.getText().trim();
-            String password = passwordField.getText().trim();
-
-            User user = User.getUser(username, password);
-
-            if (user != null){
-                MainMenuController.methodShow();
-                MainMenuController.setCurrentUser(user);
-
-                passwordField.setText(null);
-                usernameField.setText(null);
-
-            } else {
-                ExceptionMessageController.setTextOnButton("There is no such user");
-                ExceptionMessageController.methodShow();
-            }
-
-
+            logInUser();
         });
     }
 
-    public static void methodShow(){
-        logInController.currentStage.setScene(logInController.currentScene);
-        logInController.currentStage.show();
+    public static void showScene(){
+        currentStage.setScene(logInController.currentScene);
+        currentStage.show();    // вызываем так как это первое окно в приложении и надо показать Stage
+    }
+
+    private void logInUser(){
+        String username = usernameField.getText().trim();
+        String password = passwordField.getText().trim();
+
+        User user = User.getUser(username, password);
+
+        if (user != null){
+            MainMenuController.methodShow();
+            MainMenuController.setCurrentUser(user);
+
+            passwordField.setText(null);
+            usernameField.setText(null);
+
+        } else {
+            ExceptionMessageController.setText("Data is uncorrected");
+            ExceptionMessageController.showScene();
+        }
     }
 }

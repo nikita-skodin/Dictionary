@@ -40,15 +40,17 @@ public class User {
         } catch (IOException e) {
             return null;
         }
-
-
     }
 
-    public static void addUser(User user) throws IOException {
+    public static void addUser(User user) {
         // TODO: 025 доделать
         ObjectMapper objectMapper = new ObjectMapper();
         Path path = Paths.get(String.format("src/main/resources/usersData/%s", user.userName+user.password+".json"));
-        objectMapper.writeValue(Files.newOutputStream(path), user);
+        try {
+            objectMapper.writeValue(Files.newOutputStream(path), user);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public void addWord(String word, String translation){

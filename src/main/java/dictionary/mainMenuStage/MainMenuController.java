@@ -4,10 +4,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
-import dictionary.Main;
 import dictionary.User;
 import dictionary.logInStage.LogInController;
-import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import org.slf4j.Logger;
@@ -17,9 +15,7 @@ public class MainMenuController extends AbstractController {
 
     private User currentUser;
     private static final Logger LOGGER = LoggerFactory.getLogger(MainMenuController.class);
-
     private static MainMenuController mainMenuController;
-
     public MainMenuController() {
 
         if (mainMenuController != null){
@@ -50,20 +46,19 @@ public class MainMenuController extends AbstractController {
         buttonExit.setOnAction(actionEvent -> {
 
             currentUser = null;
-            LogInController.methodShow();
+            LogInController.showScene();
 
         });
 
     }
 
     public static void methodShow(){
-        mainMenuController.currentStage.setScene(mainMenuController.currentScene);
-        mainMenuController.currentStage.show();
+        currentStage.setScene(mainMenuController.currentScene);
     }
-
-
     public static void setCurrentUser(User currentUser) {
         mainMenuController.currentUser = currentUser;
     }
-
+    public User getCurrentUser() {
+        return currentUser;
+    }
 }
