@@ -3,15 +3,11 @@ package dictionary.exceptionMessage;
 import dictionary.AbstractController;
 import dictionary.Main;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
-import javafx.scene.layout.StackPane;
-import javafx.scene.paint.Paint;
+import javafx.scene.control.Button;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import java.net.URL;
-import java.util.ResourceBundle;
 
 
 public class ExceptionMessageController extends AbstractController {
@@ -29,15 +25,28 @@ public class ExceptionMessageController extends AbstractController {
         exceptionMessageController = this;
     }
 
-    @FXML
-    private ResourceBundle resources;
 
     @FXML
-    private URL location;
+    private Button buttonOk;
+
+    @FXML
+    private Text text;
 
     @FXML
     void initialize() {
 
+        buttonOk.setOnAction(actionEvent -> {
+
+            Stage stage = (Stage) buttonOk.getScene().getWindow();
+
+            stage.close();
+
+        });
+
+    }
+
+    public static void setTextOnButton(String s){
+        exceptionMessageController.text.setText(s);
     }
 
     public static void methodShow(){

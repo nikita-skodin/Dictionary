@@ -69,25 +69,28 @@ public class SignInController extends AbstractController {
                 // TODO: 025 реализовать проверку на корректность всех введенных данных
 
                 if (!usernameValidator(username)) {
-                    System.out.println("Uncorrected username");
+                    ExceptionMessageController.setTextOnButton("Uncorrected username");
                     ExceptionMessageController.methodShow();
                     break;
                 }
 
                 if (!passwordValidator(password)) {
-                    System.out.println("Uncorrected password");
+                    ExceptionMessageController.setTextOnButton("Uncorrected password");
+                    ExceptionMessageController.methodShow();
                     break;
                 }
 
                 if (!mailValidator(mail)) {
-                    System.out.println("Uncorrected mail address");
+                    ExceptionMessageController.setTextOnButton("Uncorrected mail address");
+                    ExceptionMessageController.methodShow();
                     break;
                 }
 
                 user = new User(username, password, mail);
 
                 if (isUserExist(user)) {
-                    System.out.println("User is exist");
+                    ExceptionMessageController.setTextOnButton("User is exist");
+                    ExceptionMessageController.methodShow();
                     break;
                 }
 

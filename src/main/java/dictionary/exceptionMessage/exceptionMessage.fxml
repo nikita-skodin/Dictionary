@@ -18,13 +18,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <Button fx:id="buttonSignIn" graphicTextGap="5.0" layoutX="82.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #d9ba62;" text="Ok" textAlignment="CENTER" textFill="#693f3f">
+      <Button fx:id="buttonOk" graphicTextGap="5.0" layoutX="82.0" layoutY="118.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #d9ba62;" text="Ok" textAlignment="CENTER" textFill="#693f3f">
          <font>
             <Font size="15.0" />
          </font>
       </Button>
       <Line endX="-189.40000915527344" endY="-89.0" layoutX="233.0" layoutY="167.0" startX="-3.5999755859375" startY="-89.00001525878906" stroke="#d9ba62" />
-      <Text layoutX="40.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Some Text" textAlignment="CENTER" wrappingWidth="193.84133911132812">
+      <Text fx:id="text" layoutX="40.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Some Text" textAlignment="CENTER" wrappingWidth="193.84133911132812">
          <font>
             <Font size="13.0" />
          </font>
