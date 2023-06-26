@@ -27,11 +27,10 @@ public class Main extends Application {
     public void start(Stage stage) {
         this.stage = stage;
 
-        setStageOptions(stage);
+        setStageOptions(stage, "Dictionary");
         loadControllers();
 
         LogInController.methodShow();
-
 
 
     }
@@ -42,9 +41,9 @@ public class Main extends Application {
         LOGGER.info("main method was done");
     }
 
-    public void setStageOptions(Stage stage) {
+    public static void setStageOptions(Stage stage, String message) {
         stage.setResizable(false);
-        stage.setTitle("Dictionary");
+        stage.setTitle(message);
         loadImage(stage);
     }
 
@@ -52,8 +51,10 @@ public class Main extends Application {
         createControllers(LogInController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInStage\\logIn.fxml");
         createControllers(SignInController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\signInStage\\signIn.fxml");
         createControllers(MainMenuController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\mainMenuStage\\mainMenu.fxml");
-//        createControllers(ExceptionMessageController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\exceptionMessage\\exceptionMessage.fxml");
+        createControllers(ExceptionMessageController.class, "C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\exceptionMessage\\exceptionMessage.fxml");
     }
+
+
 
     public <T extends AbstractController> T createControllers(Class<T> type, String s) {
 
@@ -71,14 +72,20 @@ public class Main extends Application {
         controller.setCurrentStage(stage);
         Parent root = fxmlLoader.getRoot();
 
-        Scene scene = new Scene(root, 600, 400);
+        Scene scene;
+        if (controller instanceof ExceptionMessageController){
+            scene = new Scene(root, 274, 183);
+        }else {
+            scene = new Scene(root, 600, 400);
+        }
+
 
         controller.setCurrentScene(scene);
         return controller;
 
     }
 
-    public void loadImage(Stage stage) {
+    private static void loadImage(Stage stage) {
         try (InputStream iconStream = Main.class.getResourceAsStream("/images/img.png")) {
             if (iconStream != null) {
                 Image image = new Image(iconStream);

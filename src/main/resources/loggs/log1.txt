@@ -66,3 +66,91 @@
 
 2023-06-25 21:42:05.781 [main] INFO  dictionary.Main - main method was starting
 2023-06-25 21:42:14.683 [main] INFO  dictionary.Main - main method was done
+2023-06-25 21:45:26.749 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:45:27.068 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:8
+
+2023-06-25 21:46:23.959 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:46:39.397 [main] INFO  dictionary.Main - main method was done
+2023-06-25 21:47:29.595 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:47:33.991 [main] INFO  dictionary.Main - main method was done
+2023-06-25 21:50:51.140 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 21:50:51.453 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:12
+
+2023-06-25 23:06:20.438 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:06:20.804 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:12
+
+2023-06-25 23:08:57.267 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:08:57.585 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:9
+
+2023-06-25 23:09:38.142 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:09:38.462 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:9
+
+2023-06-25 23:11:51.198 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:11:51.534 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml:8
+
+2023-06-25 23:17:39.619 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:17:39.959 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml
+
+2023-06-25 23:18:50.216 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:18:50.560 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/exceptionMessage/exceptionMessage.fxml
+
+2023-06-25 23:20:27.078 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:20:37.356 [main] INFO  dictionary.Main - main method was done
+2023-06-25 23:21:03.023 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:21:06.161 [main] INFO  dictionary.Main - main method was done
+2023-06-25 23:21:59.503 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:22:10.659 [main] INFO  dictionary.Main - main method was done
+2023-06-25 23:27:53.644 [main] INFO  dictionary.Main - main method was starting
+2023-06-25 23:28:02.823 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:10:52.492 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:11:00.238 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:12:04.943 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:12:16.399 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:12:27.153 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:12:34.558 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:14:56.526 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:15:07.294 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:18:12.595 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:18:17.617 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:21:32.933 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:21:49.488 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:36:57.068 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:39:44.314 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:40:55.875 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:41:01.039 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:43:04.431 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:43:21.409 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:45:18.342 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:49:30.322 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:50:30.984 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:50:36.051 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:50:46.348 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:51:00.265 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:51:12.170 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:51:21.860 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:51:29.828 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:51:36.884 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:51:44.834 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:51:51.281 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:52:33.416 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:52:40.303 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:52:48.041 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:52:54.655 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:53:01.105 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:53:17.548 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:53:36.397 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:53:40.159 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:53:50.576 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:53:58.285 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:54:48.229 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:54:53.931 [main] INFO  dictionary.Main - main method was done
+2023-06-26 10:55:29.911 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 10:55:54.692 [main] INFO  dictionary.Main - main method was done

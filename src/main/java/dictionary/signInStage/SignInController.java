@@ -8,6 +8,7 @@ import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
 import dictionary.User;
+import dictionary.exceptionMessage.ExceptionMessageController;
 import dictionary.logInStage.LogInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -60,31 +61,32 @@ public class SignInController extends AbstractController {
 
         buttonSignIn.setOnAction(actionEvent -> {
             User user;
-            while (true) {
+            do {
                 String username = usernameField.getText().trim();
                 String password = passwordField.getText().trim();
                 String mail = mailField.getText().trim();
 
                 // TODO: 025 реализовать проверку на корректность всех введенных данных
 
-                if (!usernameValidator(username)){
+                if (!usernameValidator(username)) {
                     System.out.println("Uncorrected username");
+                    ExceptionMessageController.methodShow();
                     break;
                 }
 
-                if (!passwordValidator(password)){
+                if (!passwordValidator(password)) {
                     System.out.println("Uncorrected password");
                     break;
                 }
 
-                if (!mailValidator(mail)){
+                if (!mailValidator(mail)) {
                     System.out.println("Uncorrected mail address");
                     break;
                 }
 
                 user = new User(username, password, mail);
 
-                if (isUserExist(user)){
+                if (isUserExist(user)) {
                     System.out.println("User is exist");
                     break;
                 }
@@ -100,7 +102,7 @@ public class SignInController extends AbstractController {
                 passwordField.setText(null);
                 mailField.setText(null);
                 break;
-            }
+            } while (true);
         });
 
     }

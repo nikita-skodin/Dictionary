@@ -1,11 +1,18 @@
 package dictionary.exceptionMessage;
 
 import dictionary.AbstractController;
+import dictionary.Main;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.text.Text;
+import javafx.scene.Scene;
+import javafx.scene.layout.StackPane;
+import javafx.scene.paint.Paint;
+import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
 
 public class ExceptionMessageController extends AbstractController {
 
@@ -23,23 +30,20 @@ public class ExceptionMessageController extends AbstractController {
     }
 
     @FXML
-    private Button buttonOk;
+    private ResourceBundle resources;
 
     @FXML
-    private Text testMessage;
-
-    @FXML
-    private Text testTitle;
+    private URL location;
 
     @FXML
     void initialize() {
 
-
-
     }
 
     public static void methodShow(){
-        exceptionMessageController.currentStage.setScene(exceptionMessageController.currentScene);
-        exceptionMessageController.currentStage.show();
+        Stage stage = new Stage();
+        Main.setStageOptions(stage, "Error");
+        stage.setScene(exceptionMessageController.currentScene);
+        stage.show();
     }
 }
