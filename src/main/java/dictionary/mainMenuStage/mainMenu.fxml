@@ -19,6 +19,11 @@
                   <Font size="32.0" />
                </font>
             </Button>
+            <Button fx:id="buttonExit" layoutX="461.0" layoutY="212.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="73.0" style="-fx-background-color: #8a8167;" text="exit" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
          </children>
         </AnchorPane>
         <Label layoutX="220.0" layoutY="32.0" prefHeight="58.0" prefWidth="160.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">

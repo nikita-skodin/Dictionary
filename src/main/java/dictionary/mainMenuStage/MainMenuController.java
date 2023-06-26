@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import dictionary.AbstractController;
 import dictionary.Main;
 import dictionary.User;
+import dictionary.logInStage.LogInController;
 import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MainMenuController extends AbstractController {
+
     private User currentUser;
     private static final Logger LOGGER = LoggerFactory.getLogger(MainMenuController.class);
 
@@ -40,13 +42,28 @@ public class MainMenuController extends AbstractController {
     private Button startButton;
 
     @FXML
+    private Button buttonExit;
+
+    @FXML
     void initialize() {
+
+        buttonExit.setOnAction(actionEvent -> {
+
+            currentUser = null;
+            LogInController.methodShow();
+
+        });
 
     }
 
     public static void methodShow(){
         mainMenuController.currentStage.setScene(mainMenuController.currentScene);
         mainMenuController.currentStage.show();
+    }
+
+
+    public static void setCurrentUser(User currentUser) {
+        mainMenuController.currentUser = currentUser;
     }
 
 }

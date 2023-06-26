@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
 import dictionary.User;
+import dictionary.exceptionMessage.ExceptionMessageController;
 import dictionary.mainMenuStage.MainMenuController;
 import dictionary.signInStage.SignInController;
 import javafx.fxml.FXML;
@@ -61,6 +62,14 @@ public class LogInController extends AbstractController {
 
             if (user != null){
                 MainMenuController.methodShow();
+                MainMenuController.setCurrentUser(user);
+
+                passwordField.setText(null);
+                usernameField.setText(null);
+
+            } else {
+                ExceptionMessageController.setTextOnButton("There is no such user");
+                ExceptionMessageController.methodShow();
             }
 
 
