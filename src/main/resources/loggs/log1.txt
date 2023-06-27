@@ -233,3 +233,5 @@
 2023-06-27 13:45:55.132 [main] INFO  dictionary.Main - main method was done
 2023-06-27 13:46:04.159 [main] INFO  dictionary.Main - main method was starting
 2023-06-27 13:46:06.186 [main] INFO  dictionary.Main - main method was done
+2023-06-27 13:48:25.304 [main] INFO  dictionary.Main - main method was starting
+2023-06-27 13:48:41.620 [main] INFO  dictionary.Main - main method was done

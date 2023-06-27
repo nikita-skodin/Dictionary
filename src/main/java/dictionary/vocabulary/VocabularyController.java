@@ -3,6 +3,8 @@ package dictionary.vocabulary;
 import dictionary.AbstractController;
 import dictionary.User;
 import dictionary.mainMenuStage.MainMenuController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
@@ -52,11 +54,19 @@ public class VocabularyController extends AbstractController {
             MainMenuController.showScene();
         });
 
-//        columnWords.setCellValueFactory(new PropertyValueFactory<>("userName"));
-//        columnTranslates.setCellValueFactory(new PropertyValueFactory<>("password"));
-//
-//        table.getColumns().add(columnWords);
-//        table.getColumns().add(columnTranslates);
+        ObservableList<User> users = FXCollections.observableArrayList(
+
+                new User("nikita", "111", "maila@")
+
+        );
+
+        TableView<User> table = new TableView<User>(users);
+
+        columnWords.setCellValueFactory(new PropertyValueFactory<>("userName"));
+        columnTranslates.setCellValueFactory(new PropertyValueFactory<>("password"));
+
+        table.getColumns().add(columnWords);
+        table.getColumns().add(columnTranslates);
 
 
 
