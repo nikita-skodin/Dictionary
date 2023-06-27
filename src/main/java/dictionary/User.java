@@ -10,9 +10,14 @@ import java.util.Objects;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.*;
+import dictionary.mainMenuStage.MainMenuController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 @JsonAutoDetect
 public class User {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(User.class);
     private String userName;
     private String password;
     private String userMailAddress;
@@ -31,13 +36,12 @@ public class User {
 
     //можно добавить шифровку при хранении файла n+p
     public static User getUser(String userName, String password){
-        // TODO: 025 доделать
         ObjectMapper objectMapper = new ObjectMapper();
         Path path = Paths.get(String.format("src/main/resources/usersData/%s", userName+password+".json"));
-
         try {
             return objectMapper.readValue(Files.newInputStream(path), User.class);
         } catch (IOException e) {
+            LOGGER.info("Attempt to get user failed");
             return null;
         }
     }
@@ -49,6 +53,7 @@ public class User {
         try {
             objectMapper.writeValue(Files.newOutputStream(path), user);
         } catch (IOException e) {
+            LOGGER.error("Exception in addUser, ioException: " + e);
             throw new RuntimeException(e);
         }
     }

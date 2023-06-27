@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 import dictionary.AbstractController;
 import dictionary.User;
 import dictionary.logInStage.LogInController;
+import dictionary.vocabulary.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import org.slf4j.Logger;
@@ -32,7 +33,7 @@ public class MainMenuController extends AbstractController {
     private URL location;
 
     @FXML
-    private Button dictionaryButton;
+    private Button vocabularyButton;
 
     @FXML
     private Button startButton;
@@ -50,9 +51,15 @@ public class MainMenuController extends AbstractController {
 
         });
 
+        vocabularyButton.setOnAction(actionEvent -> {
+
+            VocabularyController.showScene();
+
+        });
+
     }
 
-    public static void methodShow(){
+    public static void showScene(){
         currentStage.setScene(mainMenuController.currentScene);
     }
     public static void setCurrentUser(User currentUser) {

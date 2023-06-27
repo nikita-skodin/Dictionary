@@ -9,7 +9,7 @@
     <children>
         <AnchorPane layoutY="121.0" prefHeight="279.0" prefWidth="600.0" style="-fx-background-color: #d6d4ce;">
          <children>
-            <Button fx:id="dictionaryButton" layoutX="61.0" layoutY="70.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="197.0" style="-fx-background-color: #8a8167;" text="Dictionary" textFill="WHITE">
+            <Button fx:id="vocabularyButton" layoutX="61.0" layoutY="70.0" mnemonicParsing="false" prefHeight="86.0" prefWidth="197.0" style="-fx-background-color: #8a8167;" text="Dictionary" textFill="WHITE">
                <font>
                   <Font size="32.0" />
                </font>

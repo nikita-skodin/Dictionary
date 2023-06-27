@@ -203,3 +203,33 @@
 2023-06-26 19:30:24.457 [main] INFO  dictionary.Main - main method was done
 2023-06-26 19:30:38.955 [main] INFO  dictionary.Main - main method was starting
 2023-06-26 19:30:42.472 [main] INFO  dictionary.Main - main method was done
+2023-06-26 19:35:21.351 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 19:35:34.714 [main] INFO  dictionary.Main - main method was done
+2023-06-26 20:24:27.069 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 20:25:02.451 [main] INFO  dictionary.Main - main method was done
+2023-06-26 20:30:37.464 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 20:30:55.882 [main] INFO  dictionary.Main - main method was done
+2023-06-26 20:35:59.773 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 20:36:09.649 [main] INFO  dictionary.Main - main method was done
+2023-06-26 20:36:42.166 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 20:36:47.815 [main] INFO  dictionary.Main - main method was done
+2023-06-26 20:55:25.000 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 20:55:25.410 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: C:\Users\dmitr\Desktop\mainjavaprojects\FXtest5\src\main\java\dictionary\vocabulary\vocabulary.fxmlScr (Не удается найти указанный файл)
+2023-06-26 20:56:16.596 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 20:56:29.064 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user failed
+2023-06-26 20:56:40.191 [main] INFO  dictionary.Main - main method was done
+2023-06-26 20:56:54.164 [main] INFO  dictionary.Main - main method was starting
+2023-06-26 20:57:01.156 [main] INFO  dictionary.Main - main method was done
+2023-06-27 12:45:10.480 [main] INFO  dictionary.Main - main method was starting
+2023-06-27 12:45:20.380 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user failed
+2023-06-27 12:45:45.176 [main] INFO  dictionary.Main - main method was done
+2023-06-27 13:36:53.451 [main] INFO  dictionary.Main - main method was starting
+2023-06-27 13:37:21.055 [main] INFO  dictionary.Main - main method was done
+2023-06-27 13:38:23.542 [main] INFO  dictionary.Main - main method was starting
+2023-06-27 13:38:45.849 [main] INFO  dictionary.Main - main method was done
+2023-06-27 13:40:20.949 [main] INFO  dictionary.Main - main method was starting
+2023-06-27 13:40:35.135 [main] INFO  dictionary.Main - main method was done
+2023-06-27 13:45:47.528 [main] INFO  dictionary.Main - main method was starting
+2023-06-27 13:45:55.132 [main] INFO  dictionary.Main - main method was done
+2023-06-27 13:46:04.159 [main] INFO  dictionary.Main - main method was starting
+2023-06-27 13:46:06.186 [main] INFO  dictionary.Main - main method was done

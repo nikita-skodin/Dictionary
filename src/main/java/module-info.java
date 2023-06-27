@@ -16,5 +16,7 @@ module maindir.fxtest5 {
     opens dictionary.signInStage to javafx.fxml;
     exports dictionary.exceptionMessage;
     opens dictionary.exceptionMessage to javafx.fxml;
+    exports dictionary.vocabulary;
+    opens dictionary.vocabulary to javafx.fxml;
 
 }
