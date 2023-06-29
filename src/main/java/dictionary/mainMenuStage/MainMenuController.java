@@ -65,7 +65,7 @@ public class MainMenuController extends AbstractController {
     public static void setCurrentUser(User currentUser) {
         mainMenuController.currentUser = currentUser;
     }
-    public User getCurrentUser() {
-        return currentUser;
+    public static User getCurrentUser() {
+        return mainMenuController.currentUser;
     }
 }

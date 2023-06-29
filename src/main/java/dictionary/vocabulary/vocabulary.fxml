@@ -9,26 +9,22 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.vocabulary.VocabularyController">
-   <children>
-      <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #e8b24f;">
-         <children>
-            <Text layoutX="245.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dictionary" wrappingWidth="108.5367431640625">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Text>
-            <Button fx:id="buttonExit" layoutX="502.0" layoutY="20.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="84.0" style="-fx-background-color: #b52e16;" text="Exit">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
-      <TableView fx:id="table" layoutY="70.0" prefHeight="330.0" prefWidth="600.0">
-        <columns>
-          <TableColumn fx:id="columnWords" prefWidth="299.199951171875" style="-fx-background-color: #6b6b6b;" text="Words" />
-          <TableColumn fx:id="columnTranslates" minWidth="0.0" prefWidth="300.0" style="-fx-background-color: #6b6b6b;" text="Tranclates" />
-        </columns>
-      </TableView>
-   </children>
+   <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #e8b24f;">
+      <Text layoutX="245.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dictionary" wrappingWidth="108.5367431640625">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <Button fx:id="buttonExit" layoutX="502.0" layoutY="20.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="84.0" style="-fx-background-color: #b52e16;" text="Exit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+   </Pane>
+   <TableView fx:id="myTable" layoutY="70.0" prefHeight="330.0" prefWidth="600.0" style="-fx-background-color: #6b6b6b;">
+      <columns>
+         <TableColumn fx:id="columnTranslates" minWidth="0.0" prefWidth="300.0" resizable="false" style="-fx-background-color: #6b6b6b;" text="Tranclates" />
+         <TableColumn fx:id="columnWords" prefWidth="299.20001220703125" resizable="false" style="-fx-background-color: #6b6b6b;" text="Words" />
+      </columns>
+   </TableView>
 </AnchorPane>

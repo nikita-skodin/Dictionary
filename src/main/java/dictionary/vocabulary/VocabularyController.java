@@ -6,9 +6,8 @@ import dictionary.mainMenuStage.MainMenuController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -30,7 +29,7 @@ public class VocabularyController extends AbstractController {
     }
 
     @FXML
-    public TableView<User> table;
+    public TableView<User> myTable;
 
     @FXML
     private ResourceBundle resources;
@@ -47,27 +46,48 @@ public class VocabularyController extends AbstractController {
     @FXML
     public Button buttonExit;
 
+    ObservableList<User> users = FXCollections.observableArrayList(
+
+            new User("nikddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@"),
+            new User("nikita", "111", "maila@")
+
+    );
+
     @FXML
-    void initialize() {
+    public void initialize() {
 
         buttonExit.setOnAction(actionEvent -> {
             MainMenuController.showScene();
         });
 
-        ObservableList<User> users = FXCollections.observableArrayList(
-
-                new User("nikita", "111", "maila@")
-
-        );
-
-        TableView<User> table = new TableView<User>(users);
-
+        myTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         columnWords.setCellValueFactory(new PropertyValueFactory<>("userName"));
         columnTranslates.setCellValueFactory(new PropertyValueFactory<>("password"));
 
-        table.getColumns().add(columnWords);
-        table.getColumns().add(columnTranslates);
-
+        myTable.setItems(users);
 
 
     }
