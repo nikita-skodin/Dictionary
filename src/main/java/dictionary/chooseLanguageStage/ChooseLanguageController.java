@@ -2,11 +2,9 @@ package dictionary.chooseLanguageStage;
 
 import dictionary.AbstractController;
 import dictionary.Main;
+import dictionary.training.TrainingController;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -51,6 +49,15 @@ public class ChooseLanguageController extends AbstractController {
         });
 
 
+        buttonOk.setOnAction(actionEvent -> {
+
+
+
+            closeStage();
+            TrainingController.showScene();
+        });
+
+
 
     }
 
@@ -63,8 +70,14 @@ public class ChooseLanguageController extends AbstractController {
 
     private static void closeStage(){
         Stage stage = (Stage) chooseLanguageController.buttonCancel.getScene().getWindow();
-        chooseLanguageController.toggleGroup1.getSelectedToggle().setSelected(false);
+
+        Toggle toggle = chooseLanguageController.toggleGroup1.getSelectedToggle();
+        if (toggle != null) {
+            toggle.setSelected(false);
+        }
+
         chooseLanguageController.textFieldWordsNumber.setText("");
+
         stage.close();
     }
 

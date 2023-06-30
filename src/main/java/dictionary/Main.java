@@ -50,6 +50,7 @@ public class Main extends Application {
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\vocabularyScene\\vocabulary.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\addWordStage\\addWorld.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\chooseLanguageStage\\chooseLanguage.fxml");
+        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\training\\training.fxml");
     }
     public <T extends AbstractController> void createController(String s) {
 
