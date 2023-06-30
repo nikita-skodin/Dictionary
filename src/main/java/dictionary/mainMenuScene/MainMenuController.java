@@ -5,6 +5,7 @@ import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
 import dictionary.User;
+import dictionary.chooseLanguageStage.ChooseLanguageController;
 import dictionary.logInScene.LogInController;
 import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
@@ -31,10 +32,10 @@ public class MainMenuController extends AbstractController {
     private URL location;
 
     @FXML
-    private Button vocabularyButton;
+    private Button buttonVocabulary;
 
     @FXML
-    private Button startButton;
+    private Button buttonStart;
 
     @FXML
     private Button buttonExit;
@@ -51,7 +52,11 @@ public class MainMenuController extends AbstractController {
 
         });
 
-        vocabularyButton.setOnAction(actionEvent -> {
+        buttonStart.setOnAction(actionEvent -> {
+            ChooseLanguageController.showStage();
+        });
+
+        buttonVocabulary.setOnAction(actionEvent -> {
             User.addToObservableList();
             VocabularyController.showScene();
 

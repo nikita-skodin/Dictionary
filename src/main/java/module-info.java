@@ -20,5 +20,9 @@ module maindir.fxtest {
     opens dictionary.vocabularyScene to javafx.fxml;
     exports dictionary.addWordStage;
     opens dictionary.addWordStage to javafx.fxml;
+    exports dictionary.chooseLanguageStage;
+    opens dictionary.chooseLanguageStage to javafx.fxml;
+    exports dictionary.training;
+    opens dictionary.training to javafx.fxml;
 
 }

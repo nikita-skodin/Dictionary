@@ -1,6 +1,7 @@
 package dictionary;
 
 import dictionary.addWordStage.AddWorldController;
+import dictionary.chooseLanguageStage.ChooseLanguageController;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.logInScene.LogInController;
 import javafx.application.Application;
@@ -48,6 +49,7 @@ public class Main extends Application {
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\exceptionMessageStage\\exceptionMessage.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\vocabularyScene\\vocabulary.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\addWordStage\\addWorld.fxml");
+        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\chooseLanguageStage\\chooseLanguage.fxml");
     }
     public <T extends AbstractController> void createController(String s) {
 
@@ -69,7 +71,7 @@ public class Main extends Application {
         Scene scene;
         if (controller instanceof ExceptionMessageController) {
             scene = new Scene(root, 274, 183);
-        } else if (controller instanceof AddWorldController) {
+        } else if (controller instanceof AddWorldController || controller instanceof ChooseLanguageController) {
             scene = new Scene(root,423, 228);
         } else {
             scene = new Scene(root, 600, 400);

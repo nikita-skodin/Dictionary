@@ -46,6 +46,7 @@ public class SignInController extends AbstractController {
 
         buttonLogIn.setOnAction(actionEvent -> {
             LogInController.showScene();
+            cleanTextFields();
         });
 
         buttonSignIn.setOnAction(actionEvent -> {
@@ -93,9 +94,7 @@ public class SignInController extends AbstractController {
         User.addUser(user);
         LogInController.showScene();
 
-        usernameField.setText("");
-        passwordField.setText("");
-        mailField.setText("");
+        cleanTextFields();
     }
 
     private boolean usernameValidator(String s) {
@@ -114,4 +113,11 @@ public class SignInController extends AbstractController {
     private boolean isUserExist(User user) {
         return Files.exists(Paths.get(String.format("src/main/resources/usersData/%s", user.getUserName() + user.getPassword() + ".json")));
     }
+
+    private void cleanTextFields(){
+        passwordField.setText("");
+        mailField.setText("");
+        usernameField.setText("");
+    }
+
 }

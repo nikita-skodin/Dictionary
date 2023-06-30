@@ -144,3 +144,26 @@
 2023-06-30 19:18:36.607 [main] INFO  dictionary.Main - main method was starting
 2023-06-30 19:20:52.220 [main] INFO  dictionary.Main - main method was starting
 2023-06-30 19:20:53.860 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:21:18.483 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:21:20.693 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-06-30 19:24:35.916 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:25:57.906 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:26:00.053 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-06-30 19:28:50.676 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:33:24.213 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:34:11.827 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-06-30 19:34:18.110 [main] INFO  dictionary.Main - main method was done
+2023-06-30 20:13:41.310 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 20:13:46.900 [main] INFO  dictionary.Main - main method was done
+2023-06-30 20:44:50.403 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 20:45:31.060 [main] INFO  dictionary.Main - main method was done
+2023-06-30 20:51:25.858 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 20:51:37.795 [main] INFO  dictionary.Main - main method was done
+2023-06-30 20:53:08.206 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 20:54:56.163 [main] INFO  dictionary.Main - main method was done
+2023-06-30 20:56:36.922 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 20:57:08.730 [main] INFO  dictionary.Main - main method was done
+2023-06-30 20:58:51.805 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 20:58:59.875 [main] INFO  dictionary.Main - main method was done
+2023-06-30 21:00:39.302 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 21:00:46.737 [main] INFO  dictionary.Main - main method was done
