@@ -76,7 +76,7 @@ public class LogInController extends AbstractController {
 
         } else {
             ExceptionMessageController.setText("Data is uncorrected");
-            ExceptionMessageController.showScene();
+            ExceptionMessageController.showStage();
         }
     }
 }

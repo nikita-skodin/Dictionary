@@ -4,7 +4,6 @@ import dictionary.AbstractController;
 import dictionary.User;
 import dictionary.addWordStage.AddWorldController;
 import dictionary.mainMenuScene.MainMenuController;
-import javafx.beans.binding.ListExpression;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -30,7 +29,7 @@ public class VocabularyController extends AbstractController {
     }
 
     @FXML
-    private TableView<User.Node> myTable;
+    private TableView<User.Node> table;
 
     @FXML
     private ResourceBundle resources;
@@ -50,28 +49,50 @@ public class VocabularyController extends AbstractController {
     @FXML
     private Button buttonAddWord;
 
-    public static ObservableList<User.Node> users = FXCollections.observableArrayList();
+    @FXML
+    private Button buttonRemove;
+
+    private static final ObservableList<User.Node> list = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
 
+        buttonRemove.setOnAction(actionEvent -> {
+            TableSelectionModel<User.Node> selectionModel = table.getSelectionModel();
+            if (!selectionModel.isEmpty()) {
+                User.Node selectedNode = selectionModel.getSelectedItem();
+                User.removeNode(selectedNode);
+                table.getItems().remove(selectedNode);
+            }
+
+        });
+
         buttonExit.setOnAction(actionEvent -> {
             MainMenuController.showScene();
+            VocabularyController.clearTable();
         });
 
         buttonAddWord.setOnAction(actionEvent -> {
             AddWorldController.showScene();
         });
 
-        myTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
+        table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         columnWords.setCellValueFactory(new PropertyValueFactory<>("original"));
         columnTranslates.setCellValueFactory(new PropertyValueFactory<>("translate"));
 
-        myTable.setItems(users);
+        table.setItems(list);
 
     }
 
     public static void showScene() {
         currentStage.setScene(vocabularyController.currentScene);
+    }
+
+    public static void addToTable(User.Node node){
+        list.add(node);
+    }
+
+    public static void clearTable(){
+        list.clear();
     }
 }

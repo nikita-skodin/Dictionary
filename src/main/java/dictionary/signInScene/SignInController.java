@@ -66,19 +66,19 @@ public class SignInController extends AbstractController {
 
         if (!usernameValidator(username)) {
             ExceptionMessageController.setText("Uncorrected username");
-            ExceptionMessageController.showScene();
+            ExceptionMessageController.showStage();
             return;
         }
 
         if (!passwordValidator(password)) {
             ExceptionMessageController.setText("Uncorrected password");
-            ExceptionMessageController.showScene();
+            ExceptionMessageController.showStage();
             return;
         }
 
         if (!mailValidator(mail)) {
             ExceptionMessageController.setText("Uncorrected mail address");
-            ExceptionMessageController.showScene();
+            ExceptionMessageController.showStage();
             return;
         }
 
@@ -86,16 +86,16 @@ public class SignInController extends AbstractController {
 
         if (isUserExist(user)) {
             ExceptionMessageController.setText("User is exist");
-            ExceptionMessageController.showScene();
+            ExceptionMessageController.showStage();
             return;
         }
 
         User.addUser(user);
-
         LogInController.showScene();
-        usernameField.setText(null);
-        passwordField.setText(null);
-        mailField.setText(null);
+
+        usernameField.setText("");
+        passwordField.setText("");
+        mailField.setText("");
     }
 
     private boolean usernameValidator(String s) {

@@ -40,7 +40,7 @@ public class ExceptionMessageController extends AbstractController {
         exceptionMessageController.text.setText(s);
     }
 
-    public static void showScene(){
+    public static void showStage(){
         Stage stage = new Stage();
         Main.setStageOptions(stage, "Error");
         stage.setScene(exceptionMessageController.currentScene);

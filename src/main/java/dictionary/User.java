@@ -8,6 +8,7 @@ import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.*;
+import dictionary.vocabularyScene.VocabularyController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -53,8 +54,50 @@ public class User {
         }
     }
 
-    public void addWord(String word, String translation){
+    public boolean addWord(String word, String translation){
+        if (vocabulary.containsKey(word)){
+            return false;
+        }
         vocabulary.put(word, translation);
+        return true;
+    }
+
+    public static void addToObservableList(){
+        for (Map.Entry<String, String> el : currentUser.vocabulary.entrySet()) {
+            VocabularyController.addToTable(new Node(el.getKey(), el.getValue()));
+        }
+    }
+
+    public static void removeNode(Node node){
+        currentUser.vocabulary.remove(node.original, node.translate);
+    }
+
+
+    public static class Node{
+
+        String original;
+        String translate;
+
+        public Node(String original, String translate) {
+            this.original = original;
+            this.translate = translate;
+        }
+
+        public String getOriginal() {
+            return original;
+        }
+
+        public String getTranslate() {
+            return translate;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "original='" + original + '\'' +
+                    ", translate='" + translate + '\'' +
+                    '}';
+        }
     }
 
     @Override
@@ -116,40 +159,6 @@ public class User {
 
     public static void setCurrentUser(User currentUser) {
         User.currentUser = currentUser;
-    }
-
-    public static void addToList(List<Node> list){
-        for (Map.Entry<String, String> el : currentUser.vocabulary.entrySet()) {
-            list.add(new Node(el.getKey(), el.getValue()));
-        }
-    }
-
-
-    public static class Node{
-
-        String original;
-        String translate;
-
-        public Node(String original, String translate) {
-            this.original = original;
-            this.translate = translate;
-        }
-
-        public String getOriginal() {
-            return original;
-        }
-
-        public String getTranslate() {
-            return translate;
-        }
-
-        @Override
-        public String toString() {
-            return "Node{" +
-                    "original='" + original + '\'' +
-                    ", translate='" + translate + '\'' +
-                    '}';
-        }
     }
 
 }

@@ -6,7 +6,7 @@ import java.util.ResourceBundle;
 import dictionary.AbstractController;
 import dictionary.Main;
 import dictionary.User;
-import dictionary.mainMenuScene.MainMenuController;
+import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -57,9 +57,12 @@ public class AddWorldController extends AbstractController {
             String textOriginal = textFieldOriginal.getText().toLowerCase();
             String textTranslate = textFieldTranslate.getText().toLowerCase();
 
-            User.getCurrentUser().addWord(textOriginal, textTranslate);
-            VocabularyController.users.add(new User.Node(textOriginal, textTranslate));
-
+            if (User.getCurrentUser().addWord(textOriginal, textTranslate)) {
+                VocabularyController.addToTable(new User.Node(textOriginal, textTranslate));
+            }else {
+                ExceptionMessageController.setText("This word is already exist");
+                ExceptionMessageController.showStage();
+            }
             closeStage();
         });
 
@@ -72,8 +75,8 @@ public class AddWorldController extends AbstractController {
     }
 
     private void cleanTextFields(){
-        textFieldOriginal.setText(null);
-        textFieldTranslate.setText(null);
+        textFieldOriginal.setText("");
+        textFieldTranslate.setText("");
     }
 
     public static void showScene(){

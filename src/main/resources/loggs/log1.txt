@@ -84,3 +84,46 @@
 2023-06-30 17:36:16.699 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user failed
 2023-06-30 17:37:17.799 [main] INFO  dictionary.Main - main method was starting
 2023-06-30 17:37:25.979 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:09:08.397 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:09:19.845 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:23:27.597 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:23:33.146 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user failed
+2023-06-30 18:24:12.305 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:24:47.222 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:25:56.552 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:26:40.885 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:35:01.274 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:36:04.275 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:36:26.569 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:36:41.003 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:36:57.364 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:37:20.984 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:39:12.813 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:39:58.039 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:40:06.697 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:42:56.141 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:43:05.051 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user failed
+2023-06-30 18:43:20.346 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:44:41.557 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:45:00.785 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:45:43.943 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:45:58.081 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:46:26.287 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:47:50.617 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:49:30.427 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:49:57.403 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:50:01.466 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:50:17.178 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:50:20.994 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:50:49.750 [main] INFO  dictionary.Main - main method was done
+2023-06-30 18:51:40.975 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 18:52:08.876 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:01:30.211 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:01:40.213 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:03:38.687 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:04:15.170 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:04:27.558 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:04:58.575 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:05:08.674 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:05:15.294 [main] INFO  dictionary.Main - main method was done
+2023-06-30 19:05:20.032 [main] INFO  dictionary.Main - main method was starting
