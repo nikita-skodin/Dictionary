@@ -28,8 +28,8 @@
    </Pane>
    <TableView fx:id="myTable" layoutY="70.0" prefHeight="330.0" prefWidth="600.0" style="-fx-background-color: #6b6b6b;">
       <columns>
-         <TableColumn fx:id="columnTranslates" minWidth="0.0" prefWidth="300.0" resizable="false" style="-fx-background-color: #6b6b6b;" text="Tranclates" />
          <TableColumn fx:id="columnWords" prefWidth="299.20001220703125" resizable="false" style="-fx-background-color: #6b6b6b;" text="Words" />
+         <TableColumn fx:id="columnTranslates" minWidth="0.0" prefWidth="300.0" resizable="false" style="-fx-background-color: #6b6b6b;" text="Tranclates" />
       </columns>
    </TableView>
 </AnchorPane>

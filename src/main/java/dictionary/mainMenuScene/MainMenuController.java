@@ -51,8 +51,8 @@ public class MainMenuController extends AbstractController {
         });
 
         vocabularyButton.setOnAction(actionEvent -> {
-
-            VocabularyController.users.add(User.getCurrentUser());
+            User.addToList(VocabularyController.users);
+//            VocabularyController.users.add(new User.Node("собака", "dog"));
             VocabularyController.showScene();
 
         });

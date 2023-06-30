@@ -7,6 +7,7 @@ import dictionary.AbstractController;
 import dictionary.Main;
 import dictionary.User;
 import dictionary.mainMenuScene.MainMenuController;
+import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -57,6 +58,7 @@ public class AddWorldController extends AbstractController {
             String textTranslate = textFieldTranslate.getText().toLowerCase();
 
             User.getCurrentUser().addWord(textOriginal, textTranslate);
+            VocabularyController.users.add(new User.Node(textOriginal, textTranslate));
 
             closeStage();
         });

@@ -4,6 +4,7 @@ import dictionary.AbstractController;
 import dictionary.User;
 import dictionary.addWordStage.AddWorldController;
 import dictionary.mainMenuScene.MainMenuController;
+import javafx.beans.binding.ListExpression;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -29,7 +30,7 @@ public class VocabularyController extends AbstractController {
     }
 
     @FXML
-    public TableView<User> myTable;
+    public TableView<User.Node> myTable;
 
     @FXML
     private ResourceBundle resources;
@@ -38,10 +39,10 @@ public class VocabularyController extends AbstractController {
     private URL location;
 
     @FXML
-    private TableColumn<User, String> columnTranslates;
+    private TableColumn<User.Node, String> columnTranslates;
 
     @FXML
-    private TableColumn<User, String> columnWords;
+    private TableColumn<User.Node, String> columnWords;
 
     @FXML
     public Button buttonExit;
@@ -49,11 +50,7 @@ public class VocabularyController extends AbstractController {
     @FXML
     private Button buttonAddWord;
 
-    public static ObservableList<User> users = FXCollections.observableArrayList(
-
-            new User("nikita", "111", "maila@")
-
-    );
+    public static ObservableList<User.Node> users = FXCollections.observableArrayList();
 
     @FXML
     public void initialize() {
@@ -66,14 +63,11 @@ public class VocabularyController extends AbstractController {
             AddWorldController.showScene();
         });
 
-
-
         myTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
-        columnWords.setCellValueFactory(new PropertyValueFactory<>("userName"));
-        columnTranslates.setCellValueFactory(new PropertyValueFactory<>("password"));
+        columnWords.setCellValueFactory(new PropertyValueFactory<>("original"));
+        columnTranslates.setCellValueFactory(new PropertyValueFactory<>("translate"));
 
         myTable.setItems(users);
-
 
     }
 

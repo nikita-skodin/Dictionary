@@ -16,7 +16,6 @@ public class User {
     private static final Logger LOGGER = LoggerFactory.getLogger(User.class);
     private static User currentUser = null;
     private static ArrayList<User> currentUserNotes = null;
-
     private String userName;
     private String password;
     private String userMailAddress;
@@ -120,8 +119,14 @@ public class User {
         User.currentUser = currentUser;
     }
 
+    public static void addToList(List<Node> list){
+        for (Map.Entry<String, String> el : currentUser.vocabulary.entrySet()) {
+            list.add(new Node(el.getKey(), el.getValue()));
+        }
+    }
 
-    static class Node{
+
+    public static class Node{
 
         String original;
         String translate;
