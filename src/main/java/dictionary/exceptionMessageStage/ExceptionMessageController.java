@@ -1,4 +1,4 @@
-package dictionary.exceptionMessage;
+package dictionary.exceptionMessageStage;
 
 import dictionary.AbstractController;
 import dictionary.Main;

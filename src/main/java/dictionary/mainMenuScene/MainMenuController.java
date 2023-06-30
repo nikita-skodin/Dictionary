@@ -1,12 +1,12 @@
-package dictionary.mainMenuStage;
+package dictionary.mainMenuScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
 import dictionary.User;
-import dictionary.logInStage.LogInController;
-import dictionary.vocabulary.VocabularyController;
+import dictionary.logInScene.LogInController;
+import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import org.slf4j.Logger;
@@ -53,6 +53,7 @@ public class MainMenuController extends AbstractController {
 
         vocabularyButton.setOnAction(actionEvent -> {
 
+            VocabularyController.users.add(MainMenuController.getCurrentUser());
             VocabularyController.showScene();
 
         });

@@ -1,4 +1,4 @@
-package dictionary.signInStage;
+package dictionary.signInScene;
 
 import java.net.URL;
 import java.nio.file.Files;
@@ -7,8 +7,8 @@ import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
 import dictionary.User;
-import dictionary.exceptionMessage.ExceptionMessageController;
-import dictionary.logInStage.LogInController;
+import dictionary.exceptionMessageStage.ExceptionMessageController;
+import dictionary.logInScene.LogInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;

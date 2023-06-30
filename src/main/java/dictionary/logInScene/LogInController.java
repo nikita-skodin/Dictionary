@@ -1,13 +1,13 @@
-package dictionary.logInStage;
+package dictionary.logInScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import dictionary.AbstractController;
 import dictionary.User;
-import dictionary.exceptionMessage.ExceptionMessageController;
-import dictionary.mainMenuStage.MainMenuController;
-import dictionary.signInStage.SignInController;
+import dictionary.exceptionMessageStage.ExceptionMessageController;
+import dictionary.mainMenuScene.MainMenuController;
+import dictionary.signInScene.SignInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -69,6 +69,7 @@ public class LogInController extends AbstractController {
         if (user != null){
             MainMenuController.showScene();
             MainMenuController.setCurrentUser(user);
+
 
             passwordField.setText(null);
             usernameField.setText(null);

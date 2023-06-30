@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.vocabulary.VocabularyController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #404040;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.vocabularyScene.VocabularyController">
    <Pane prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #e8b24f;">
       <Text layoutX="245.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dictionary" wrappingWidth="108.5367431640625">
          <font>
@@ -16,6 +16,11 @@
          </font>
       </Text>
       <Button fx:id="buttonExit" layoutX="502.0" layoutY="20.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="84.0" style="-fx-background-color: #b52e16;" text="Exit">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonAddWord" layoutX="14.0" layoutY="20.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="84.0" style="-fx-background-color: #0a9438;" text="Add word">
          <font>
             <Font size="14.0" />
          </font>

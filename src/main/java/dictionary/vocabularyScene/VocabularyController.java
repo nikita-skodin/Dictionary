@@ -1,12 +1,11 @@
-package dictionary.vocabulary;
+package dictionary.vocabularyScene;
 
 import dictionary.AbstractController;
 import dictionary.User;
-import dictionary.mainMenuStage.MainMenuController;
+import dictionary.mainMenuScene.MainMenuController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import org.slf4j.Logger;
@@ -46,32 +45,11 @@ public class VocabularyController extends AbstractController {
     @FXML
     public Button buttonExit;
 
-    ObservableList<User> users = FXCollections.observableArrayList(
+    @FXML
+    private Button buttonAddWord;
 
-            new User("nikddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
-            new User("nikita", "111", "maila@"),
+    public static ObservableList<User> users = FXCollections.observableArrayList(
+
             new User("nikita", "111", "maila@")
 
     );
@@ -82,6 +60,12 @@ public class VocabularyController extends AbstractController {
         buttonExit.setOnAction(actionEvent -> {
             MainMenuController.showScene();
         });
+
+        buttonAddWord.setOnAction(actionEvent -> {
+
+        });
+
+
 
         myTable.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         columnWords.setCellValueFactory(new PropertyValueFactory<>("userName"));
