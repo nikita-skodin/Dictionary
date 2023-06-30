@@ -15,7 +15,6 @@ import org.slf4j.LoggerFactory;
 public class User {
     private static final Logger LOGGER = LoggerFactory.getLogger(User.class);
     private static User currentUser = null;
-    private static ArrayList<User> currentUserNotes = null;
     private String userName;
     private String password;
     private String userMailAddress;

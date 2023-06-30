@@ -7,6 +7,7 @@ import dictionary.AbstractController;
 import dictionary.User;
 import dictionary.logInScene.LogInController;
 import dictionary.vocabularyScene.VocabularyController;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import org.slf4j.Logger;
@@ -44,15 +45,15 @@ public class MainMenuController extends AbstractController {
 
         buttonExit.setOnAction(actionEvent -> {
 
+            LogInController.showScene();
             User.addUser(User.getCurrentUser());
             User.setCurrentUser(null);
-            LogInController.showScene();
+            VocabularyController.users.clear();
 
         });
 
         vocabularyButton.setOnAction(actionEvent -> {
             User.addToList(VocabularyController.users);
-//            VocabularyController.users.add(new User.Node("собака", "dog"));
             VocabularyController.showScene();
 
         });

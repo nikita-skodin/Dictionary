@@ -30,7 +30,7 @@ public class VocabularyController extends AbstractController {
     }
 
     @FXML
-    public TableView<User.Node> myTable;
+    private TableView<User.Node> myTable;
 
     @FXML
     private ResourceBundle resources;

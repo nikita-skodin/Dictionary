@@ -71,8 +71,8 @@ public class LogInController extends AbstractController {
             User.setCurrentUser(user);
 
 
-            passwordField.setText(null);
-            usernameField.setText(null);
+            passwordField.setText("");
+            usernameField.setText("");
 
         } else {
             ExceptionMessageController.setText("Data is uncorrected");

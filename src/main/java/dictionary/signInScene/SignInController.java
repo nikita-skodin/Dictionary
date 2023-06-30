@@ -18,7 +18,6 @@ import org.slf4j.LoggerFactory;
 public class SignInController extends AbstractController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SignInController.class);
     private static SignInController signInController;
-
     public SignInController() {
         if (signInController != null) {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
