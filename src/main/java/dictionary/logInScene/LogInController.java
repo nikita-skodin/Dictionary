@@ -68,7 +68,7 @@ public class LogInController extends AbstractController {
 
         if (user != null){
             MainMenuController.showScene();
-            MainMenuController.setCurrentUser(user);
+            User.setCurrentUser(user);
 
 
             passwordField.setText(null);

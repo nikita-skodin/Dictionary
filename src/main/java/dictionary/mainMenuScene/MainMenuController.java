@@ -13,8 +13,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class MainMenuController extends AbstractController {
-
-    private User currentUser;
     private static final Logger LOGGER = LoggerFactory.getLogger(MainMenuController.class);
     private static MainMenuController mainMenuController;
     public MainMenuController() {
@@ -46,14 +44,15 @@ public class MainMenuController extends AbstractController {
 
         buttonExit.setOnAction(actionEvent -> {
 
-            currentUser = null;
+            User.addUser(User.getCurrentUser());
+            User.setCurrentUser(null);
             LogInController.showScene();
 
         });
 
         vocabularyButton.setOnAction(actionEvent -> {
 
-            VocabularyController.users.add(MainMenuController.getCurrentUser());
+            VocabularyController.users.add(User.getCurrentUser());
             VocabularyController.showScene();
 
         });
@@ -62,11 +61,5 @@ public class MainMenuController extends AbstractController {
 
     public static void showScene(){
         currentStage.setScene(mainMenuController.currentScene);
-    }
-    public static void setCurrentUser(User currentUser) {
-        mainMenuController.currentUser = currentUser;
-    }
-    public static User getCurrentUser() {
-        return mainMenuController.currentUser;
     }
 }

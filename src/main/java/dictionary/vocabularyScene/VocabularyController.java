@@ -2,6 +2,7 @@ package dictionary.vocabularyScene;
 
 import dictionary.AbstractController;
 import dictionary.User;
+import dictionary.addWordStage.AddWorldController;
 import dictionary.mainMenuScene.MainMenuController;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -62,7 +63,7 @@ public class VocabularyController extends AbstractController {
         });
 
         buttonAddWord.setOnAction(actionEvent -> {
-
+            AddWorldController.showScene();
         });
 
 

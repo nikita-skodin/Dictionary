@@ -1,4 +1,4 @@
-module maindir.fxtest5 {
+module maindir.fxtest {
     requires javafx.controls;
     requires javafx.fxml;
     requires org.apache.logging.log4j.slf4j;
@@ -18,5 +18,7 @@ module maindir.fxtest5 {
     opens dictionary.exceptionMessageStage to javafx.fxml;
     exports dictionary.vocabularyScene;
     opens dictionary.vocabularyScene to javafx.fxml;
+    exports dictionary.addWordStage;
+    opens dictionary.addWordStage to javafx.fxml;
 
 }

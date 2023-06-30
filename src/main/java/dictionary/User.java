@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.databind.*;
@@ -15,12 +13,12 @@ import org.slf4j.LoggerFactory;
 
 @JsonAutoDetect
 public class User {
-
     private static final Logger LOGGER = LoggerFactory.getLogger(User.class);
+    private static User currentUser = null;
     private String userName;
     private String password;
     private String userMailAddress;
-
+    private ArrayList<Node> nodes = new ArrayList<>();
     private Map<String, String> vocabulary;
 
     public User() {
@@ -46,7 +44,6 @@ public class User {
     }
 
     public static void addUser(User user) {
-        // TODO: 025 доделать
         ObjectMapper objectMapper = new ObjectMapper();
         Path path = Paths.get(String.format("src/main/resources/usersData/%s", user.userName+user.password+".json"));
         try {
@@ -59,6 +56,7 @@ public class User {
 
     public void addWord(String word, String translation){
         vocabulary.put(word, translation);
+        nodes.add(new Node(word, translation));
     }
 
     @Override
@@ -113,4 +111,53 @@ public class User {
     public void setVocabulary(Map<String, String> vocabulary) {
         this.vocabulary = vocabulary;
     }
+
+    public static User getCurrentUser() {
+        return currentUser;
+    }
+
+    public static void setCurrentUser(User currentUser) {
+        User.currentUser = currentUser;
+
+        for (var el : currentUser.vocabulary.entrySet()) {
+            User.currentUser.nodes.add(new Node(el.getKey(), el.getValue()));
+        }
+
+        System.out.println(User.getCurrentUser().nodes);
+
+
+    }
+
+//    public ArrayList<Node> getNodes() {
+//        return nodes;
+//    }
+
+
+    static class Node{
+
+        String original;
+        String translate;
+
+        public Node(String original, String translate) {
+            this.original = original;
+            this.translate = translate;
+        }
+
+        public String getOriginal() {
+            return original;
+        }
+
+        public String getTranslate() {
+            return translate;
+        }
+
+        @Override
+        public String toString() {
+            return "Node{" +
+                    "original='" + original + '\'' +
+                    ", translate='" + translate + '\'' +
+                    '}';
+        }
+    }
+
 }
