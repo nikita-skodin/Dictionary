@@ -15,10 +15,11 @@ import org.slf4j.LoggerFactory;
 public class User {
     private static final Logger LOGGER = LoggerFactory.getLogger(User.class);
     private static User currentUser = null;
+    private static ArrayList<User> currentUserNotes = null;
+
     private String userName;
     private String password;
     private String userMailAddress;
-    private ArrayList<Node> nodes = new ArrayList<>();
     private Map<String, String> vocabulary;
 
     public User() {
@@ -56,7 +57,6 @@ public class User {
 
     public void addWord(String word, String translation){
         vocabulary.put(word, translation);
-        nodes.add(new Node(word, translation));
     }
 
     @Override
@@ -118,19 +118,7 @@ public class User {
 
     public static void setCurrentUser(User currentUser) {
         User.currentUser = currentUser;
-
-        for (var el : currentUser.vocabulary.entrySet()) {
-            User.currentUser.nodes.add(new Node(el.getKey(), el.getValue()));
-        }
-
-        System.out.println(User.getCurrentUser().nodes);
-
-
     }
-
-//    public ArrayList<Node> getNodes() {
-//        return nodes;
-//    }
 
 
     static class Node{
