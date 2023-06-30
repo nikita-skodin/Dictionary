@@ -141,3 +141,6 @@
 2023-06-30 19:15:16.950 [main] INFO  dictionary.Main - main method was starting
 2023-06-30 19:15:18.848 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user failed
 2023-06-30 19:17:21.499 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:18:36.607 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:20:52.220 [main] INFO  dictionary.Main - main method was starting
+2023-06-30 19:20:53.860 [main] INFO  dictionary.Main - main method was done

@@ -30,7 +30,9 @@ public class Main extends Application {
     public static void main(String[] args) {
         LOGGER.info("main method was starting");
         launch();
-        User.addUser(User.getCurrentUser());
+        if (User.getCurrentUser() != null){
+            User.addUser(User.getCurrentUser());
+        }
         LOGGER.info("main method was done");
     }
 
