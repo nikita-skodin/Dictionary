@@ -65,19 +65,19 @@ public class SignInController extends AbstractController {
         String mail = mailField.getText().trim();
 
         if (!usernameValidator(username)) {
-            ExceptionMessageController.setText("Uncorrected username");
+            ExceptionMessageController.setText("Incorrect username");
             ExceptionMessageController.showStage();
             return;
         }
 
         if (!passwordValidator(password)) {
-            ExceptionMessageController.setText("Uncorrected password");
+            ExceptionMessageController.setText("Incorrect password");
             ExceptionMessageController.showStage();
             return;
         }
 
         if (!mailValidator(mail)) {
-            ExceptionMessageController.setText("Uncorrected mail address");
+            ExceptionMessageController.setText("Incorrect mail address");
             ExceptionMessageController.showStage();
             return;
         }

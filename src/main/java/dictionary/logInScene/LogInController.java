@@ -75,7 +75,7 @@ public class LogInController extends AbstractController {
             usernameField.setText("");
 
         } else {
-            ExceptionMessageController.setText("Data is uncorrected");
+            ExceptionMessageController.setText("Data is incorrect");
             ExceptionMessageController.showStage();
         }
     }

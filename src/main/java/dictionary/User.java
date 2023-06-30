@@ -38,7 +38,7 @@ public class User {
         try {
             return objectMapper.readValue(Files.newInputStream(path), User.class);
         } catch (IOException e) {
-            LOGGER.info("Attempt to get user failed");
+            LOGGER.info("Attempt to get user was fail");
             return null;
         }
     }

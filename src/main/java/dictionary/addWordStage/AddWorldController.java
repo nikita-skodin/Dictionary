@@ -54,10 +54,13 @@ public class AddWorldController extends AbstractController {
         });
 
         buttonOk.setOnAction(actionEvent -> {
-            String textOriginal = textFieldOriginal.getText().toLowerCase();
-            String textTranslate = textFieldTranslate.getText().toLowerCase();
+            String textOriginal = textFieldOriginal.getText().toLowerCase().trim();
+            String textTranslate = textFieldTranslate.getText().toLowerCase().trim();
 
-            if (User.getCurrentUser().addWord(textOriginal, textTranslate)) {
+            if (textOriginal.equals("") || textTranslate.equals("")){
+                ExceptionMessageController.setText("This word is incorrect");
+                ExceptionMessageController.showStage();
+            } else if (User.getCurrentUser().addWord(textOriginal, textTranslate)) {
                 VocabularyController.addToTable(new User.Node(textOriginal, textTranslate));
             }else {
                 ExceptionMessageController.setText("This word is already exist");
