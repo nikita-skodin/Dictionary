@@ -26,5 +26,7 @@ module maindir.fxtest {
     opens dictionary.training to javafx.fxml;
     exports dictionary.checkWord;
     opens dictionary.checkWord to javafx.fxml;
+    exports dictionary.restorePassword;
+    opens dictionary.restorePassword to javafx.fxml;
 
 }

@@ -2,6 +2,8 @@ package dictionary.logInScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import dictionary.restorePassword.RestorePasswordController;
 import javafx.fxml.FXML;
 import javafx.scene.input.KeyEvent;
 
@@ -46,9 +48,14 @@ public class LogInController extends AbstractController {
     private TextField usernameField;
 
     @FXML
+    private Button buttonForgotPassword;
+
+    @FXML
     void initialize() {
 
-
+        buttonForgotPassword.setOnAction(actionEvent -> {
+            RestorePasswordController.showStage();
+        });
 
         buttonSignIn.setOnAction(actionEvent -> {
             SignInController.showScene();

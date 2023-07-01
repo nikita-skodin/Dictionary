@@ -4,20 +4,24 @@ import dictionary.addWordStage.AddWorldController;
 import dictionary.chooseLanguageStage.ChooseLanguageController;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.logInScene.LogInController;
+import dictionary.restorePassword.RestorePasswordController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+
 import org.slf4j.*;
 
 public class Main extends Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
     private Stage stage;
+
     @Override
     public void start(Stage stage) {
         this.stage = stage;
@@ -31,7 +35,7 @@ public class Main extends Application {
     public static void main(String[] args) {
         LOGGER.info("main method was starting");
         launch();
-        if (User.getCurrentUser() != null){
+        if (User.getCurrentUser() != null) {
             User.addUser(User.getCurrentUser());
         }
         LOGGER.info("main method was done");
@@ -42,6 +46,7 @@ public class Main extends Application {
         stage.setTitle(message);
         loadImage(stage);
     }
+
     public void loadControllers() {
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInScene\\logIn.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\signInScene\\signIn.fxml");
@@ -52,7 +57,9 @@ public class Main extends Application {
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\chooseLanguageStage\\chooseLanguage.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\training\\training.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\checkWord\\checkWord.fxml");
+        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\restorePassword\\restorePassword.fxml");
     }
+
     public <T extends AbstractController> void createController(String s) {
 
         T controller;
@@ -73,14 +80,15 @@ public class Main extends Application {
         Scene scene;
         if (controller instanceof ExceptionMessageController) {
             scene = new Scene(root, 274, 183);
-        } else if (controller instanceof AddWorldController || controller instanceof ChooseLanguageController) {
-            scene = new Scene(root,423, 228);
+        } else if (controller instanceof AddWorldController || controller instanceof ChooseLanguageController || controller instanceof RestorePasswordController) {
+            scene = new Scene(root, 423, 228);
         } else {
             scene = new Scene(root, 600, 400);
         }
 
         controller.setCurrentScene(scene);
     }
+
     private static void loadImage(Stage stage) {
         try (InputStream iconStream = Main.class.getResourceAsStream("/images/img.png")) {
             if (iconStream != null) {
