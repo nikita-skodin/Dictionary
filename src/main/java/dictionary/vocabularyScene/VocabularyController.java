@@ -73,7 +73,7 @@ public class VocabularyController extends AbstractController {
         });
 
         buttonAddWord.setOnAction(actionEvent -> {
-            AddWorldController.showScene();
+            AddWorldController.showStage();
         });
 
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);

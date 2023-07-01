@@ -64,7 +64,15 @@ public class TrainingController extends AbstractController {
     void initialize() {
 
         buttonOk.setOnAction(actionEvent -> {
-            checkWord(translateField.getText());
+            checkWord(translateField.getText(), language);
+        });
+
+        buttonNoIdeas.setOnAction(actionEvent -> {
+            checkWord("", language);
+        });
+
+        buttonExit.setOnAction(actionEvent -> {
+
         });
 
 
@@ -161,27 +169,57 @@ public class TrainingController extends AbstractController {
                 CheckWordController.showScene(true, 2);
                 destruct();
             }
+        }else {
+            if (iterator.hasNext()) {
+                currentElement = randomWordsMap.get(iterator.next());
+                currentWord.setText(currentElement);
+                currentStage.setScene(trainingController.currentScene);
+
+            } else {
+
+                CheckWordController.setStateText("Game over!");
+                CheckWordController.setRightAnswerText("Your score is: " + counter);
+                CheckWordController.showScene(true, 2);
+                destruct();
+            }
         }
 
 
     }
 
-    private void checkWord(String string){
+    private void checkWord(String string, Language language){
 
-        String rightAnswer = randomWordsMap.get(currentElement);
+        String rightAnswer;
 
-        if (string.equals(rightAnswer)){
-            CheckWordController.setStateText("Right!");
-            CheckWordController.setRightAnswerText("");
-            CheckWordController.showScene(false, 1);
-            counter++;
-        } else {
-            CheckWordController.setStateText("Wrong!");
-            CheckWordController.setRightAnswerText("Right answer is: " + rightAnswer);
-            CheckWordController.showScene(false, 2);
+        if (language.equals(Language.RUSSIAN)) {
+            rightAnswer = randomWordsMap.get(currentElement);
+        }else {
+            rightAnswer = getKeyByValue(randomWordsMap, currentElement);
         }
 
-        translateField.setText("");
+            if (string.equals(rightAnswer)){
+                CheckWordController.setStateText("Right!");
+                CheckWordController.setRightAnswerText("");
+                CheckWordController.showScene(false, 1);
+                counter++;
+            } else {
+                CheckWordController.setStateText("Wrong!");
+                CheckWordController.setRightAnswerText("Right answer is: " + rightAnswer);
+                CheckWordController.showScene(false, 2);
+            }
+
+            translateField.setText("");
+
+    }
+
+
+    private static <K, V> K getKeyByValue(Map<K, V> map, V value) {
+        for (Map.Entry<K, V> entry : map.entrySet()) {
+            if (value.equals(entry.getValue())) {
+                return entry.getKey();
+            }
+        }
+        return null;  // Возвращаем null, если значение не найдено
     }
 
 

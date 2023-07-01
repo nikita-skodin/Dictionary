@@ -290,3 +290,22 @@
 2023-07-01 19:25:49.259 [main] INFO  dictionary.Main - main method was done
 2023-07-01 19:30:26.117 [main] INFO  dictionary.Main - main method was starting
 2023-07-01 19:30:48.164 [main] INFO  dictionary.Main - main method was done
+2023-07-01 19:34:12.818 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 19:34:43.158 [main] INFO  dictionary.Main - main method was done
+2023-07-01 19:35:16.759 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 19:35:56.947 [main] INFO  dictionary.Main - main method was done
+2023-07-01 19:36:39.600 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 19:36:56.753 [main] INFO  dictionary.Main - main method was done
+2023-07-01 19:37:13.051 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 19:37:29.939 [main] INFO  dictionary.Main - main method was done
+2023-07-01 21:12:23.663 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 21:13:03.764 [main] INFO  dictionary.Main - main method was done
+2023-07-01 21:14:40.268 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 21:14:43.178 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 21:14:53.205 [main] INFO  dictionary.Main - main method was done
+2023-07-01 21:19:27.275 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 21:21:13.815 [main] INFO  dictionary.Main - main method was done
+2023-07-01 21:21:51.267 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 21:27:33.062 [main] INFO  dictionary.Main - main method was done
+2023-07-01 21:29:37.436 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 21:29:54.539 [main] INFO  dictionary.Main - main method was done

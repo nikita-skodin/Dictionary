@@ -60,6 +60,9 @@ public class AddWorldController extends AbstractController {
             if (textOriginal.equals("") || textTranslate.equals("")){
                 ExceptionMessageController.setText("This word is incorrect");
                 ExceptionMessageController.showStage();
+            } else if (User.getCurrentUser().getVocabulary().containsValue(textTranslate)) {
+                ExceptionMessageController.setText("This translation is already exist");
+                ExceptionMessageController.showStage();
             } else if (User.getCurrentUser().addWord(textOriginal, textTranslate)) {
                 VocabularyController.addToTable(new User.Node(textOriginal, textTranslate));
             }else {
@@ -82,7 +85,7 @@ public class AddWorldController extends AbstractController {
         textFieldTranslate.setText("");
     }
 
-    public static void showScene(){
+    public static void showStage(){
         Stage stage = new Stage();
         Main.setStageOptions(stage, "Add word");
         stage.setScene(addWorldController.currentScene);
