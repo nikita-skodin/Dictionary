@@ -156,9 +156,13 @@ public class TrainingController extends AbstractController {
     }
 
     private void game(){
-        if (language.equals(Language.RUSSIAN)) {
+
             if (iterator.hasNext()) {
-                currentElement = iterator.next();
+                if (language.equals(Language.RUSSIAN)) {
+                    currentElement = iterator.next();
+                }else {
+                    currentElement = randomWordsMap.get(iterator.next());
+                }
                 currentWord.setText(currentElement);
                 currentStage.setScene(trainingController.currentScene);
 
@@ -169,22 +173,6 @@ public class TrainingController extends AbstractController {
                 CheckWordController.showScene(true, 2);
                 destruct();
             }
-        }else {
-            if (iterator.hasNext()) {
-                currentElement = randomWordsMap.get(iterator.next());
-                currentWord.setText(currentElement);
-                currentStage.setScene(trainingController.currentScene);
-
-            } else {
-
-                CheckWordController.setStateText("Game over!");
-                CheckWordController.setRightAnswerText("Your score is: " + counter);
-                CheckWordController.showScene(true, 2);
-                destruct();
-            }
-        }
-
-
     }
 
     private void checkWord(String string, Language language){
