@@ -6,6 +6,7 @@ import dictionary.training.TrainingController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -95,6 +96,14 @@ public class ChooseLanguageController extends AbstractController {
 
     public static void cleanField(){
         chooseLanguageController.textFieldWordsNumber.setText("");
+    }
+
+    public void onKeyPressed(KeyEvent event) {
+        // Обработка события нажатия клавиши
+        switch (event.getCode()) {
+            case ESCAPE -> buttonCancel.fire();
+            case ENTER -> buttonOk.fire();
+        }
     }
 
 }

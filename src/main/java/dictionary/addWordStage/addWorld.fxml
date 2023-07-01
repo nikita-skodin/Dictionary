@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="228.0" prefWidth="423.0" style="-fx-background-color: d6d4ce;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.addWordStage.AddWorldController">
+<AnchorPane prefHeight="228.0" prefWidth="423.0" style="-fx-background-color: d6d4ce;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.addWordStage.AddWorldController" onKeyPressed="#onKeyPressed">
    <children>
       <AnchorPane prefHeight="62.0" prefWidth="423.0" style="-fx-background-color: a39d8c;">
          <children>

@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,7 +65,7 @@ public class TrainingController extends AbstractController {
     void initialize() {
 
         buttonOk.setOnAction(actionEvent -> {
-            checkWord(translateField.getText(), language);
+            checkWord(translateField.getText().trim(), language);
         });
 
         buttonNoIdeas.setOnAction(actionEvent -> {
@@ -218,5 +219,12 @@ public class TrainingController extends AbstractController {
     public enum Language{
         ENGLISH,
         RUSSIAN
+    }
+
+    public void onKeyPressed(KeyEvent event) {
+        // Обработка события нажатия клавиши
+        switch (event.getCode()) {
+            case ENTER -> buttonOk.fire();
+        }
     }
 }

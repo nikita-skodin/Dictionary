@@ -352,3 +352,67 @@
 2023-07-01 22:13:56.262 [main] INFO  dictionary.Main - main method was done
 2023-07-01 22:14:00.671 [main] INFO  dictionary.Main - main method was starting
 2023-07-01 22:16:14.797 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:25:05.833 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:25:15.130 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:27:17.373 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:27:17.624 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/logInScene/logIn.fxml
+
+2023-07-01 22:27:45.080 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:27:47.449 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:31:14.890 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:31:17.099 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:31:28.184 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:31:49.275 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:31:55.569 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:31:57.205 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:31:59.443 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:02.493 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:32:21.976 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:32:27.716 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:28.721 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:29.871 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:31.870 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:32:35.536 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:32:47.471 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:48.832 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:49.600 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:51.014 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:54.107 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:56.199 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:56.942 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:57.833 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:32:59.799 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:33:43.715 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:33:45.403 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:33:47.696 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:33:53.193 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:53:31.530 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:53:33.404 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:34.711 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:35.781 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:39.928 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:40.989 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:42.100 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:44.779 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:49.305 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:50.378 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:53:51.131 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:54:03.864 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:54:06.076 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:54:39.866 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:56:13.825 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:56:15.992 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:57:14.961 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:58:34.976 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:58:51.491 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:59:27.422 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:59:48.593 [main] INFO  dictionary.Main - main method was done
+2023-07-01 23:00:36.054 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 23:01:21.175 [main] INFO  dictionary.Main - main method was done
+2023-07-01 23:02:18.661 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 23:04:36.331 [main] INFO  dictionary.Main - main method was done
+2023-07-01 23:10:30.151 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 23:10:59.826 [main] INFO  dictionary.Main - main method was done
+2023-07-01 23:11:31.776 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 23:11:51.095 [main] INFO  dictionary.Main - main method was done

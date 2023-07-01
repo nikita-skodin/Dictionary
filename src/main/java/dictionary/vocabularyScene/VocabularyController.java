@@ -9,6 +9,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.KeyEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -94,5 +95,14 @@ public class VocabularyController extends AbstractController {
 
     public static void clearTable(){
         list.clear();
+    }
+
+    @FXML
+    public void onKeyPressed(KeyEvent event) {
+        // Обработка события нажатия клавиши
+        switch (event.getCode()) {
+            case ESCAPE -> buttonExit.fire();
+            case DELETE -> buttonRemove.fire();
+        }
     }
 }

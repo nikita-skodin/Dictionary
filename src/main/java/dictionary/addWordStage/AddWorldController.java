@@ -11,6 +11,7 @@ import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -90,6 +91,14 @@ public class AddWorldController extends AbstractController {
         Main.setStageOptions(stage, "Add word");
         stage.setScene(addWorldController.currentScene);
         stage.show();
+    }
+
+    public void onKeyPressed(KeyEvent event) {
+        // Обработка события нажатия клавиши
+        switch (event.getCode()) {
+            case ESCAPE -> buttonCancel.fire();
+            case ENTER -> buttonOk.fire();
+        }
     }
 
 }

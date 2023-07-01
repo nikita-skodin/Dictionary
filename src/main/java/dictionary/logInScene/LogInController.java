@@ -2,13 +2,14 @@ package dictionary.logInScene;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.fxml.FXML;
+import javafx.scene.input.KeyEvent;
 
 import dictionary.AbstractController;
 import dictionary.User;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.mainMenuScene.MainMenuController;
 import dictionary.signInScene.SignInController;
-import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import org.slf4j.Logger;
@@ -46,6 +47,9 @@ public class LogInController extends AbstractController {
 
     @FXML
     void initialize() {
+
+
+
         buttonSignIn.setOnAction(actionEvent -> {
             SignInController.showScene();
         });
@@ -79,4 +83,13 @@ public class LogInController extends AbstractController {
             ExceptionMessageController.showStage();
         }
     }
+
+    @FXML
+    public void onKeyPressed(KeyEvent event) {
+        // Обработка события нажатия клавиши
+        switch (event.getCode()) {
+            case ENTER -> buttonLogIn.fire();
+        }
+    }
+
 }

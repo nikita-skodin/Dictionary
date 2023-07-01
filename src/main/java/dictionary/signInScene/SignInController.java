@@ -12,6 +12,7 @@ import dictionary.logInScene.LogInController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -118,6 +119,14 @@ public class SignInController extends AbstractController {
         passwordField.setText("");
         mailField.setText("");
         usernameField.setText("");
+    }
+
+    @FXML
+    public void onKeyPressed(KeyEvent event) {
+        // Обработка события нажатия клавиши
+        switch (event.getCode()) {
+            case ENTER -> buttonSignIn.fire();
+        }
     }
 
 }
