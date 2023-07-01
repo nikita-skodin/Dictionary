@@ -28,7 +28,7 @@
                 </Button>
             </children>
         </AnchorPane>
-        <Label fx:id="CurrentWord" alignment="CENTER" layoutX="11.0" layoutY="32.0" prefHeight="58.0" prefWidth="581.0" text="Dog" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+        <Label fx:id="currentWord" alignment="CENTER" layoutX="11.0" layoutY="32.0" prefHeight="58.0" prefWidth="581.0" text="Dog" textAlignment="CENTER" textFill="WHITE" wrapText="true">
             <font>
                 <Font size="38.0" />
             </font>

@@ -3,6 +3,7 @@ package dictionary.chooseLanguageStage;
 import dictionary.AbstractController;
 import dictionary.Main;
 import dictionary.training.TrainingController;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
@@ -41,8 +42,18 @@ public class ChooseLanguageController extends AbstractController {
     @FXML
     private ToggleGroup toggleGroup1;
 
+    private TrainingController.Language selected;
+
     @FXML
     void initialize() {
+
+        radioEnToRus.setOnAction(actionEvent -> {
+            selected = TrainingController.Language.ENGLISH;
+        });
+
+        radioRusToEn.setOnAction(actionEvent -> {
+            selected = TrainingController.Language.RUSSIAN;
+        });
 
         buttonCancel.setOnAction(actionEvent -> {
             closeStage();
@@ -51,10 +62,11 @@ public class ChooseLanguageController extends AbstractController {
 
         buttonOk.setOnAction(actionEvent -> {
 
+            if (TrainingController.setParameters(textFieldWordsNumber.getText(), selected)) {
+                closeStage();
+                TrainingController.showScene();
+            }
 
-
-            closeStage();
-            TrainingController.showScene();
         });
 
 

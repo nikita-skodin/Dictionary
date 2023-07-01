@@ -24,5 +24,7 @@ module maindir.fxtest {
     opens dictionary.chooseLanguageStage to javafx.fxml;
     exports dictionary.training;
     opens dictionary.training to javafx.fxml;
+    exports dictionary.checkWord;
+    opens dictionary.checkWord to javafx.fxml;
 
 }
