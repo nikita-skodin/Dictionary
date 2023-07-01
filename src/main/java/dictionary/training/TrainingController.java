@@ -5,6 +5,8 @@ import java.util.*;
 
 import dictionary.AbstractController;
 import dictionary.User;
+import dictionary.checkWord.CheckWordController;
+import dictionary.chooseLanguageStage.ChooseLanguageController;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.mainMenuScene.MainMenuController;
 import javafx.fxml.FXML;
@@ -35,6 +37,8 @@ public class TrainingController extends AbstractController {
     private ArrayList<String> keyList;
     private String currentElement;
 
+    private int counter = 0;
+
     @FXML
     private ResourceBundle resources;
 
@@ -61,7 +65,6 @@ public class TrainingController extends AbstractController {
 
         buttonOk.setOnAction(actionEvent -> {
             checkWord(translateField.getText());
-
         });
 
 
@@ -76,6 +79,7 @@ public class TrainingController extends AbstractController {
         }else {
             ExceptionMessageController.setText("Your dictionary is empty");
             ExceptionMessageController.showStage();
+            ChooseLanguageController.cleanField();
             return false;
         }
 
@@ -86,6 +90,7 @@ public class TrainingController extends AbstractController {
         } catch (NumberFormatException e){
             ExceptionMessageController.setText("Your word count is incorrect");
             ExceptionMessageController.showStage();
+            ChooseLanguageController.cleanField();
             return false;
         }
 
@@ -94,12 +99,14 @@ public class TrainingController extends AbstractController {
         }else {
             ExceptionMessageController.setText("Not enough words in dictionary");
             ExceptionMessageController.showStage();
+            ChooseLanguageController.cleanField();
             return false;
         }
 
         if (language == null){
             ExceptionMessageController.setText("Language was not chosen");
             ExceptionMessageController.showStage();
+            ChooseLanguageController.cleanField();
             return false;
         }
         trainingController.language = language;
@@ -116,6 +123,7 @@ public class TrainingController extends AbstractController {
         randomWordsMap = null;
         keyList = null;
         currentElement = null;
+        counter = 0;
     }
 
     public Map<String, String> createRandomMap(int numberOfWords, User user){
@@ -137,29 +145,41 @@ public class TrainingController extends AbstractController {
 
     public static void showScene() {
         trainingController.game();
-        currentStage.setScene(trainingController.currentScene);
     }
 
     private void game(){
-        if (iterator.hasNext()){
-            currentElement = iterator.next();
-            currentWord.setText(currentElement);
-        }else {
-            MainMenuController.showScene();
-            destruct();
+        if (language.equals(Language.RUSSIAN)) {
+            if (iterator.hasNext()) {
+                currentElement = iterator.next();
+                currentWord.setText(currentElement);
+                currentStage.setScene(trainingController.currentScene);
+
+            } else {
+
+                CheckWordController.setStateText("Game over!");
+                CheckWordController.setRightAnswerText("Your score is: " + counter);
+                CheckWordController.showScene(true, 2);
+                destruct();
+            }
         }
 
 
     }
 
     private void checkWord(String string){
-        if (string.equals(randomWordsMap.get(currentElement))){
-            ExceptionMessageController.setText("Right!");
-        } else {
-            ExceptionMessageController.setText("Wrong!");
-        }
 
-        ExceptionMessageController.showStage();
+        String rightAnswer = randomWordsMap.get(currentElement);
+
+        if (string.equals(rightAnswer)){
+            CheckWordController.setStateText("Right!");
+            CheckWordController.setRightAnswerText("");
+            CheckWordController.showScene(false, 1);
+            counter++;
+        } else {
+            CheckWordController.setStateText("Wrong!");
+            CheckWordController.setRightAnswerText("Right answer is: " + rightAnswer);
+            CheckWordController.showScene(false, 2);
+        }
 
         translateField.setText("");
     }

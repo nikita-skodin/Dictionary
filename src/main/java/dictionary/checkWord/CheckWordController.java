@@ -33,8 +33,6 @@ public class CheckWordController extends AbstractController {
     @FXML
     private URL location;
 
-    @FXML
-    private Button buttonOk;
 
     @FXML
     private Label rightAnswerText;
@@ -47,18 +45,31 @@ public class CheckWordController extends AbstractController {
 
 
 
+
+
     }
 
-    public static void showScene(){
+    public static void setStateText(String s){
+        checkWordController.stateText.setText(s);
+    }
+
+    public static void setRightAnswerText(String s){
+        checkWordController.rightAnswerText.setText(s);
+    }
+
+    public static void showScene(boolean isGameEnd, int sec){
         currentStage.setScene(checkWordController.currentScene);
 
-        PauseTransition delay = new PauseTransition(Duration.seconds(5));
-
-        // Задаем действие, которое будет выполнено после задержки
+        PauseTransition delay = new PauseTransition(Duration.seconds(sec));
         delay.setOnFinished(event -> {
-            // Закрываем primaryStage после истечения времени
-            TrainingController.showScene();
+            if (!isGameEnd) {
+                TrainingController.showScene();
+            }else {
+                MainMenuController.showScene();
+            }
         });
+
+        delay.play();
 
     }
 

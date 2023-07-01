@@ -88,9 +88,13 @@ public class ChooseLanguageController extends AbstractController {
             toggle.setSelected(false);
         }
 
-        chooseLanguageController.textFieldWordsNumber.setText("");
+        cleanField();
 
         stage.close();
+    }
+
+    public static void cleanField(){
+        chooseLanguageController.textFieldWordsNumber.setText("");
     }
 
 }
