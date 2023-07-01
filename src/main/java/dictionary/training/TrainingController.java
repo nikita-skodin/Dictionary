@@ -72,7 +72,10 @@ public class TrainingController extends AbstractController {
         });
 
         buttonExit.setOnAction(actionEvent -> {
-
+            CheckWordController.setRightAnswerText("Your score is: " + counter);
+            CheckWordController.setStateText("Game over");
+            CheckWordController.showScene(true, 2);
+            destruct();
         });
 
 
