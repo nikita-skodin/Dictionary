@@ -329,3 +329,26 @@
 2023-07-01 21:57:51.075 [main] INFO  dictionary.Main - main method was done
 2023-07-01 21:57:55.854 [main] INFO  dictionary.Main - main method was starting
 2023-07-01 21:58:03.140 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:03:05.865 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:03:31.776 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:07:23.078 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:07:25.772 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-01 22:07:39.578 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:07:52.140 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:08:09.707 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:08:25.140 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:08:49.437 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:10:34.432 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:10:51.041 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:11:07.604 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:11:20.254 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:11:30.558 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:12:16.072 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:12:20.765 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:12:53.018 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:12:58.268 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:13:16.634 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:13:32.966 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:13:56.262 [main] INFO  dictionary.Main - main method was done
+2023-07-01 22:14:00.671 [main] INFO  dictionary.Main - main method was starting
+2023-07-01 22:16:14.797 [main] INFO  dictionary.Main - main method was done

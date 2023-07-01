@@ -12,6 +12,6 @@ class TrainingControllerTest {
         TrainingController trainingController = new TrainingController();
 
 //        System.out.println(trainingController.createRandomMap(1));
-
+//
     }
 }

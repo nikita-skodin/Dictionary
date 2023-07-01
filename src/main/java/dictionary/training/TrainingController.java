@@ -148,7 +148,8 @@ public class TrainingController extends AbstractController {
         ArrayList<String> list = new ArrayList<>(sourseMap.keySet());
         Random random = new Random();
         while (map.size() < numberOfWords){
-            String randomKey = list.get(random.nextInt(numberOfWords) + 1);
+            int rand = random.nextInt(sourseMap.size());
+            String randomKey = list.get(rand);
             map.put(randomKey, sourseMap.get(randomKey));
         }
             return map;
