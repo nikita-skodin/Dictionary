@@ -5,6 +5,7 @@ import dictionary.Mailer;
 import dictionary.Main;
 import dictionary.User;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
+import dictionary.notificationMessage.NotificationMessageController;
 import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -58,6 +59,7 @@ public class RestorePasswordController extends AbstractController {
         buttonOk.setOnAction(actionEvent -> {
             Mailer.send(textFieldUsername.getText());
             closeStage();
+            NotificationMessageController.showStage();
         });
 
     }
@@ -74,7 +76,7 @@ public class RestorePasswordController extends AbstractController {
 
     public static void showStage(){
         Stage stage = new Stage();
-        Main.setStageOptions(stage, "RestorePassword");
+        Main.setStageOptions(stage, "Password restore");
         stage.setScene(restorePasswordController.currentScene);
         stage.show();
     }
