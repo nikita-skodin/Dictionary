@@ -6,6 +6,7 @@ import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.logInScene.LogInController;
 import dictionary.notificationMessage.NotificationMessageController;
 import dictionary.restorePassword.RestorePasswordController;
+import dictionary.settings.SettingsController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -60,6 +61,7 @@ public class Main extends Application {
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\checkWord\\checkWord.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\restorePassword\\restorePassword.fxml");
         createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\notificationMessage\\notificationMessage.fxml");
+        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\settings\\settings.fxml");
     }
 
     public <T extends AbstractController> void createController(String s) {
@@ -85,6 +87,7 @@ public class Main extends Application {
         } else if (controller instanceof AddWorldController ||
                 controller instanceof ChooseLanguageController ||
                 controller instanceof RestorePasswordController ||
+                controller instanceof SettingsController ||
                 controller instanceof NotificationMessageController) {
             scene = new Scene(root, 423, 228);
         } else {

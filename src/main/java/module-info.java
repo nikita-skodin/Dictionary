@@ -31,5 +31,7 @@ module maindir.fxtest {
     opens dictionary.restorePassword to javafx.fxml;
     exports dictionary.notificationMessage;
     opens dictionary.notificationMessage to javafx.fxml;
+    exports dictionary.settings;
+    opens dictionary.settings to javafx.fxml;
 
 }

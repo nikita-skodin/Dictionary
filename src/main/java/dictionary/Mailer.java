@@ -1,52 +1,65 @@
 package dictionary;
 
+import dictionary.exceptionMessageStage.ExceptionMessageController;
+import dictionary.restorePassword.RestorePasswordController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.Properties;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
 public class Mailer {
-    public static void send(String username){
 
-        new Thread(new Runnable() {
-            @Override
-            public void run() {
-                String from = "dictionarynotice@gmail.com";
-                String to = "skodin36@gmail.com";
+    private static final Logger LOGGER = LoggerFactory.getLogger(Mailer.class);
+    public static boolean send(String username) {
 
-                String host = "smtp.gmail.com";
+        if (username == null) {
+            ExceptionMessageController.setText("This user is not exist");
+            ExceptionMessageController.showStage();
+            return false;
+        } else {
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    String from = "dictionarynotice@gmail.com";
+                    String to = "skodin36@gmail.com";
 
-                String smtpPort = "465";
+                    String host = "smtp.gmail.com";
 
-                Properties properties = new Properties();
+                    String smtpPort = "465";
 
-                properties.put("mail.smtp.host", host);
-                properties.put("mail.smtp.port", smtpPort);
-                properties.put("mail.smtp.ssl.enable", "true");
-                properties.put("mail.smtp.auth", "true");
+                    Properties properties = new Properties();
 
-                Session session = Session.getInstance(properties, new Authenticator() {
-                    @Override
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(from, "nirsxlpowwcxtfdp");
-                    }
-                });
+                    properties.put("mail.smtp.host", host);
+                    properties.put("mail.smtp.port", smtpPort);
+                    properties.put("mail.smtp.ssl.enable", "true");
+                    properties.put("mail.smtp.auth", "true");
 
-                session.setDebug(true);
+                    Session session = Session.getInstance(properties, new Authenticator() {
+                        @Override
+                        protected PasswordAuthentication getPasswordAuthentication() {
+                            return new PasswordAuthentication(from, "nirsxlpowwcxtfdp");
+                        }
+                    });
 
-                try {
-                    MimeMessage mimeMessage = new MimeMessage(session);
-                    mimeMessage.setFrom(new InternetAddress(from));
-                    mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-                    System.out.println("USERNAME IS: " + username);
-                    mimeMessage.setSubject("Your password is: ");
-                    mimeMessage.setText(username);
-                    Transport.send(mimeMessage);
-                } catch (Exception e) {
+//                    session.setDebug(LOGGER.isDebugEnabled());
+
+                    try {
+                        MimeMessage mimeMessage = new MimeMessage(session);
+                        mimeMessage.setFrom(new InternetAddress(from));
+                        mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
+                        mimeMessage.setSubject("Your password is: ");
+                        mimeMessage.setText(username);
+                        Transport.send(mimeMessage);
+                    } catch (Exception e) {
 //            System.err.println("Error");
+                    }
                 }
-            }
-        }).start();
+            }).start();
+            return true;
+        }
 
     }
 }

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#onKeyPressed" prefHeight="228.0" prefWidth="423.0" style="-fx-background-color: d6d4ce;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dictionary.settings.SettingsController">
+    <children>
+        <AnchorPane prefHeight="62.0" prefWidth="423.0" style="-fx-background-color: a39d8c;">
+            <children>
+                <Label layoutX="166.0" layoutY="2.0" prefHeight="58.0" prefWidth="92.0" text="Settings" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Button fx:id="buttonOk" graphicTextGap="5.0" layoutX="232.0" layoutY="173.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: #d9ba62;" text="Ok" textAlignment="CENTER" textFill="#693f3f">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Line endX="-189.40000915527344" endY="-89.0" layoutX="227.0" layoutY="165.0" startX="157.4000244140625" startY="-88.99998474121094" stroke="#d9ba62" />
+        <TextField fx:id="textFieldPassword" layoutX="37.0" layoutY="89.0" prefHeight="26.0" prefWidth="348.0" promptText="Password" />
+        <TextField fx:id="textFieldNewData" layoutX="38.0" layoutY="131.0" prefHeight="26.0" prefWidth="348.0" promptText="New data" />
+        <Button fx:id="buttonCancel" graphicTextGap="5.0" layoutX="81.0" layoutY="173.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="110.0" style="-fx-background-color: a39d8c;" text="Cancel" textAlignment="CENTER" textFill="#693f3f">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+    </children>
+</AnchorPane>

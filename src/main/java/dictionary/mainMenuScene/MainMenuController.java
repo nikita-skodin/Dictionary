@@ -7,6 +7,7 @@ import dictionary.AbstractController;
 import dictionary.User;
 import dictionary.chooseLanguageStage.ChooseLanguageController;
 import dictionary.logInScene.LogInController;
+import dictionary.settings.SettingsController;
 import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -41,7 +42,28 @@ public class MainMenuController extends AbstractController {
     private Button buttonExit;
 
     @FXML
+    private Button buttonChangePassword;
+
+    @FXML
+    private Button buttonChangeEmail;
+
+    @FXML
+    private Button buttonChangeUsername;
+
+    @FXML
     void initialize() {
+
+        buttonChangeEmail.setOnAction(actionEvent -> {
+            SettingsController.showStage(Operation.CHANGE_EMAIL, "Change email");
+        });
+
+        buttonChangePassword.setOnAction(actionEvent -> {
+            SettingsController.showStage(Operation.CHANGE_PASSWORD, "Change password");
+        });
+
+        buttonChangeUsername.setOnAction(actionEvent -> {
+            SettingsController.showStage(Operation.CHANGE_USERNAME, "Change username");
+        });
 
         buttonExit.setOnAction(actionEvent -> {
 
@@ -66,5 +88,12 @@ public class MainMenuController extends AbstractController {
 
     public static void showScene(){
         currentStage.setScene(mainMenuController.currentScene);
+    }
+
+    public enum Operation{
+        CHANGE_EMAIL,
+        CHANGE_PASSWORD,
+        CHANGE_USERNAME
+
     }
 }

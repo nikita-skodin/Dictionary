@@ -21,6 +21,8 @@ public class User {
     private String userMailAddress;
     private Map<String, String> vocabulary;
 
+    private static final String regex = "@@##@@";
+
     public User() {
     }
 
@@ -34,7 +36,7 @@ public class User {
     //можно добавить шифровку при хранении файла n+p
     public static User getUser(String userName, String password){
         ObjectMapper objectMapper = new ObjectMapper();
-        Path path = Paths.get(String.format("src/main/resources/usersData/%s", userName+password+".json"));
+        Path path = Paths.get(String.format("src/main/resources/usersData/%s", userName+regex+password+".json"));
         try {
             return objectMapper.readValue(Files.newInputStream(path), User.class);
         } catch (IOException e) {
@@ -45,7 +47,7 @@ public class User {
 
     public static void addUser(User user) {
         ObjectMapper objectMapper = new ObjectMapper();
-        Path path = Paths.get(String.format("src/main/resources/usersData/%s", user.userName+user.password+".json"));
+        Path path = Paths.get(String.format("src/main/resources/usersData/%s", user.userName+regex+user.password+".json"));
         try {
             objectMapper.writeValue(Files.newOutputStream(path), user);
         } catch (IOException e) {
@@ -159,6 +161,60 @@ public class User {
 
     public static void setCurrentUser(User currentUser) {
         User.currentUser = currentUser;
+    }
+
+    public static void changeMail(String string){
+        currentUser.userMailAddress = string;
+    }
+
+    public static void changePassword(String string){
+        currentUser.password = string;
+    }
+
+    public static void username(String string){
+        currentUser.userName = string;
+    }
+
+    public static boolean usernameValidator(String s) {
+        return !s.equals("");
+    }
+
+    public static boolean passwordValidator(String s) {
+        return s.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9@#$%]).{8,}");
+    }
+
+    public static boolean mailValidator(String s) {
+        return s.matches("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+                + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$");
+    }
+    public static boolean isUserExist(User user) {
+        return Files.exists(Paths.get(String.format("src/main/resources/usersData/%s", user.getUserName() + user.getPassword() + ".json")));
+    }
+
+    public static String getUserPasswordByUsername(String userName){
+
+        if (userName.equals("")){
+            return null;
+        }
+
+        Path directory = Paths.get("src/main/resources/usersData");
+        List<String> list = new ArrayList<>();
+        try {
+            Files.list(directory)
+                    .filter(Files::isRegularFile)
+                    .forEach(file -> list.add(file.getFileName().toString().replaceAll(".json", "")));
+
+            for (String el : list) {
+                if (el.contains(userName)){
+                    return el.split(regex)[1];
+                }
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
     }
 
 }

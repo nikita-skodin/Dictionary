@@ -24,6 +24,21 @@
                   <Font size="13.0" />
                </font>
             </Button>
+            <Button fx:id="buttonChangeUsername" layoutX="61.0" layoutY="212.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #8a8167;" text="change username" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonChangeEmail" layoutX="328.0" layoutY="212.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #8a8167;" text="change mail" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonChangePassword" layoutX="195.0" layoutY="212.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #8a8167;" text="change password" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
          </children>
         </AnchorPane>
         <Label layoutX="220.0" layoutY="32.0" prefHeight="58.0" prefWidth="160.0" text="Welcome" textAlignment="CENTER" textFill="WHITE">

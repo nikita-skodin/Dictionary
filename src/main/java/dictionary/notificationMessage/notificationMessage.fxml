@@ -24,6 +24,6 @@
          </font>
       </Button>
       <Line endX="-189.40000915527344" endY="-89.0" layoutX="227.0" layoutY="165.0" startX="157.4000244140625" startY="-88.99998474121094" stroke="#d9ba62" />
-      <Text layoutX="47.0" layoutY="120.0" strokeWidth="0.0" text="Mail with password is sending to your mail, please don`t close the application. If message was not send, please check junk" textAlignment="CENTER" wrappingWidth="329.336669921875" />
+      <Text fx:id="text" layoutX="47.0" layoutY="120.0" strokeWidth="0.0" text="Mail with password is sending to your mail. If message was not send, please check junk" textAlignment="CENTER" wrappingWidth="329.336669921875" />
    </children>
 </AnchorPane>

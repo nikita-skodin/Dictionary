@@ -455,3 +455,61 @@
 2023-07-02 13:09:52.599 [main] INFO  dictionary.Main - main method was done
 2023-07-02 13:10:36.112 [main] INFO  dictionary.Main - main method was starting
 2023-07-02 13:12:22.623 [main] INFO  dictionary.Main - main method was done
+2023-07-02 17:58:00.162 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 17:58:02.064 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-02 17:58:05.098 [main] INFO  dictionary.Main - main method was done
+2023-07-02 17:58:34.085 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 17:58:35.759 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-02 17:58:38.930 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:00:32.394 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:00:52.688 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:02:36.689 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:02:37.259 [JavaFX Application Thread] ERROR dictionary.addWordStage.AddWorldController - Attempt to create AddWorldControllera second time
+2023-07-02 18:02:37.262 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/addWordStage/addWorld.fxml:10
+
+2023-07-02 18:03:55.603 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:04:08.389 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:16:22.813 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:16:27.096 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:21:59.423 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:22:01.334 [JavaFX Application Thread] INFO  dictionary.User - Attempt to get user was fail
+2023-07-02 18:22:12.128 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:33:44.830 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:34:00.884 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:34:31.041 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:34:42.157 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:35:09.099 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:35:17.195 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:37:37.969 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:38:18.359 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:40:38.112 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:42:05.296 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:53:06.912 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:53:20.112 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:56:41.096 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:57:13.653 [main] INFO  dictionary.Main - main method was done
+2023-07-02 18:58:06.917 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 18:58:30.060 [main] INFO  dictionary.Main - main method was done
+2023-07-02 19:05:15.516 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 19:05:33.740 [main] INFO  dictionary.Main - main method was done
+2023-07-02 19:06:50.317 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 19:07:21.976 [main] INFO  dictionary.Main - main method was done
+2023-07-02 19:07:40.658 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 19:07:53.410 [main] INFO  dictionary.Main - main method was done
+2023-07-02 19:29:38.821 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:11:28.799 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:11:38.546 [main] INFO  dictionary.Main - main method was done
+2023-07-02 20:12:14.302 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:12:25.078 [main] INFO  dictionary.Main - main method was done
+2023-07-02 20:15:20.785 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:15:40.744 [main] INFO  dictionary.Main - main method was done
+2023-07-02 20:16:50.550 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:22:56.209 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:23:02.989 [main] INFO  dictionary.Main - main method was done
+2023-07-02 20:24:25.659 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:24:38.707 [main] INFO  dictionary.Main - main method was done
+2023-07-02 20:26:02.176 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:26:17.079 [main] INFO  dictionary.Main - main method was done
+2023-07-02 20:28:10.985 [main] INFO  dictionary.Main - main method was starting
+2023-07-02 20:28:46.870 [main] INFO  dictionary.Main - main method was done

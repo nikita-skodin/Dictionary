@@ -66,19 +66,19 @@ public class SignInController extends AbstractController {
         String password = passwordField.getText().trim();
         String mail = mailField.getText().trim();
 
-        if (!usernameValidator(username)) {
+        if (!User.usernameValidator(username)) {
             ExceptionMessageController.setText("Incorrect username");
             ExceptionMessageController.showStage();
             return;
         }
 
-        if (!passwordValidator(password)) {
+        if (!User.passwordValidator(password)) {
             ExceptionMessageController.setText("Incorrect password");
             ExceptionMessageController.showStage();
             return;
         }
 
-        if (!mailValidator(mail)) {
+        if (!User.mailValidator(mail)) {
             ExceptionMessageController.setText("Incorrect mail address");
             ExceptionMessageController.showStage();
             return;
@@ -86,7 +86,7 @@ public class SignInController extends AbstractController {
 
         user = new User(username, password, mail);
 
-        if (isUserExist(user)) {
+        if (User.isUserExist(user)) {
             ExceptionMessageController.setText("User is exist");
             ExceptionMessageController.showStage();
             return;
@@ -96,23 +96,6 @@ public class SignInController extends AbstractController {
         LogInController.showScene();
 
         cleanTextFields();
-    }
-
-    private boolean usernameValidator(String s) {
-        return !s.equals("");
-    }
-
-    private boolean passwordValidator(String s) {
-        return s.matches("(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9@#$%]).{8,}");
-    }
-
-    private boolean mailValidator(String s) {
-        return s.matches("^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
-                + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$");
-    }
-
-    private boolean isUserExist(User user) {
-        return Files.exists(Paths.get(String.format("src/main/resources/usersData/%s", user.getUserName() + user.getPassword() + ".json")));
     }
 
     private void cleanTextFields(){

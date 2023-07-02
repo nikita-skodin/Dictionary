@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 
 public class RestorePasswordController extends AbstractController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(dictionary.addWordStage.AddWorldController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(RestorePasswordController.class);
     private static RestorePasswordController restorePasswordController;
     public RestorePasswordController() {
 
@@ -53,13 +53,13 @@ public class RestorePasswordController extends AbstractController {
 
         buttonCancel.setOnAction(actionEvent -> {
             closeStage();
-            textFieldUsername.setText("");
         });
 
         buttonOk.setOnAction(actionEvent -> {
-            Mailer.send(textFieldUsername.getText());
-            closeStage();
-            NotificationMessageController.showStage();
+            if (Mailer.send(User.getUserPasswordByUsername(textFieldUsername.getText().trim()))) {
+                closeStage();
+                NotificationMessageController.showStage();
+            }
         });
 
     }
