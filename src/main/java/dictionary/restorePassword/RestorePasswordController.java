@@ -1,6 +1,7 @@
 package dictionary.restorePassword;
 
 import dictionary.AbstractController;
+import dictionary.Mailer;
 import dictionary.Main;
 import dictionary.User;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
@@ -51,9 +52,11 @@ public class RestorePasswordController extends AbstractController {
 
         buttonCancel.setOnAction(actionEvent -> {
             closeStage();
+            textFieldUsername.setText("");
         });
 
         buttonOk.setOnAction(actionEvent -> {
+            Mailer.send(textFieldUsername.getText());
             closeStage();
         });
 

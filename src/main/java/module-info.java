@@ -4,6 +4,7 @@ module maindir.fxtest {
     requires org.apache.logging.log4j.slf4j;
     requires slf4j.api;
     requires com.fasterxml.jackson.databind;
+    requires java.mail;
 
 
     opens dictionary to javafx.fxml;
