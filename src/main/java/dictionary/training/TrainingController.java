@@ -3,12 +3,11 @@ package dictionary.training;
 import java.net.URL;
 import java.util.*;
 
-import dictionary.AbstractController;
-import dictionary.User;
+import dictionary.util.AbstractController;
+import dictionary.util.User;
 import dictionary.checkWord.CheckWordController;
 import dictionary.chooseLanguageStage.ChooseLanguageController;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
-import dictionary.mainMenuScene.MainMenuController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -26,6 +25,8 @@ public class TrainingController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(600);
+        setW(400);
         trainingController = this;
     }
 

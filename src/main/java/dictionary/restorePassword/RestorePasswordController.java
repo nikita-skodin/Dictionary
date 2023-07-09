@@ -1,12 +1,10 @@
 package dictionary.restorePassword;
 
-import dictionary.AbstractController;
-import dictionary.Mailer;
+import dictionary.util.AbstractController;
+import dictionary.util.Mailer;
 import dictionary.Main;
-import dictionary.User;
-import dictionary.exceptionMessageStage.ExceptionMessageController;
+import dictionary.util.User;
 import dictionary.notificationMessage.NotificationMessageController;
-import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -28,6 +26,8 @@ public class RestorePasswordController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(423);
+        setW(228);
         restorePasswordController = this;
     }
 

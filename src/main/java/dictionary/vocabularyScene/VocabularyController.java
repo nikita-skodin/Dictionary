@@ -1,7 +1,7 @@
 package dictionary.vocabularyScene;
 
-import dictionary.AbstractController;
-import dictionary.User;
+import dictionary.util.AbstractController;
+import dictionary.util.User;
 import dictionary.addWordStage.AddWorldController;
 import dictionary.mainMenuScene.MainMenuController;
 import javafx.collections.FXCollections;
@@ -26,6 +26,8 @@ public class VocabularyController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(600);
+        setW(400);
         vocabularyController = this;
     }
 

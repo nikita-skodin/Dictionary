@@ -1,7 +1,6 @@
-package dictionary;
+package dictionary.util;
 
 import dictionary.exceptionMessageStage.ExceptionMessageController;
-import dictionary.restorePassword.RestorePasswordController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

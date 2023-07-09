@@ -3,9 +3,9 @@ package dictionary.addWordStage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import dictionary.AbstractController;
+import dictionary.util.AbstractController;
 import dictionary.Main;
-import dictionary.User;
+import dictionary.util.User;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
@@ -26,6 +26,8 @@ public class AddWorldController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(423);
+        setW(228);
         addWorldController = this;
     }
 

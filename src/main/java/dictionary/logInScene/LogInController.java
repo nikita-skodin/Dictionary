@@ -7,8 +7,8 @@ import dictionary.restorePassword.RestorePasswordController;
 import javafx.fxml.FXML;
 import javafx.scene.input.KeyEvent;
 
-import dictionary.AbstractController;
-import dictionary.User;
+import dictionary.util.AbstractController;
+import dictionary.util.User;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.mainMenuScene.MainMenuController;
 import dictionary.signInScene.SignInController;
@@ -18,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LogInController extends AbstractController {
+
     private static final Logger LOGGER = LoggerFactory.getLogger(LogInController.class);
     private static LogInController logInController;
     public LogInController() {
@@ -26,6 +27,8 @@ public class LogInController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(600);
+        setW(400);
         logInController = this;
     }
 

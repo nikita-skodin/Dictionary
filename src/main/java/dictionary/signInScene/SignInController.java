@@ -1,12 +1,10 @@
 package dictionary.signInScene;
 
 import java.net.URL;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
-import dictionary.AbstractController;
-import dictionary.User;
+import dictionary.util.AbstractController;
+import dictionary.util.User;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.logInScene.LogInController;
 import javafx.fxml.FXML;
@@ -24,6 +22,8 @@ public class SignInController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(600);
+        setW(400);
         signInController = this;
     }
 

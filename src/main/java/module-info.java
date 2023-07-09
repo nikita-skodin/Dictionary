@@ -33,5 +33,7 @@ module maindir.fxtest {
     opens dictionary.notificationMessage to javafx.fxml;
     exports dictionary.settings;
     opens dictionary.settings to javafx.fxml;
+    opens dictionary.util to javafx.fxml;
+    exports dictionary.util;
 
 }

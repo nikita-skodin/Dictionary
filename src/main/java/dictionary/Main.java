@@ -7,6 +7,8 @@ import dictionary.logInScene.LogInController;
 import dictionary.notificationMessage.NotificationMessageController;
 import dictionary.restorePassword.RestorePasswordController;
 import dictionary.settings.SettingsController;
+import dictionary.util.AbstractController;
+import dictionary.util.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -17,6 +19,8 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.*;
+import java.nio.file.attribute.BasicFileAttributes;
 
 import org.slf4j.*;
 
@@ -29,18 +33,19 @@ public class Main extends Application {
         this.stage = stage;
 
         setStageOptions(stage, "Dictionary");
-        loadControllers();
+        loadControllers(Paths.get("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary"));
 
         LogInController.showScene();
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         LOGGER.info("main method was starting");
         launch();
         if (User.getCurrentUser() != null) {
             User.addUser(User.getCurrentUser());
         }
         LOGGER.info("main method was done");
+
     }
 
     public static void setStageOptions(Stage stage, String message) {
@@ -49,22 +54,31 @@ public class Main extends Application {
         loadImage(stage);
     }
 
-    public void loadControllers() {
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\logInScene\\logIn.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\signInScene\\signIn.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\mainMenuScene\\mainMenu.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\exceptionMessageStage\\exceptionMessage.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\vocabularyScene\\vocabulary.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\addWordStage\\addWorld.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\chooseLanguageStage\\chooseLanguage.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\training\\training.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\checkWord\\checkWord.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\restorePassword\\restorePassword.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\notificationMessage\\notificationMessage.fxml");
-        createController("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary\\settings\\settings.fxml");
+
+
+    private void loadControllers(Path pathStart) {
+
+        try {
+            Files.walkFileTree(pathStart, new SimpleFileVisitor<>(){
+                @Override
+                public FileVisitResult visitFile(Path file, BasicFileAttributes attrs) throws IOException {
+
+                    if (file.toString().endsWith(".fxml")) {
+                        createController(file.toString());
+                    }
+
+                    return super.visitFile(file, attrs);
+                }
+            });
+        } catch (IOException e) {
+            LOGGER.error("fxml is not found");
+            throw new RuntimeException(e);
+
+        }
+
     }
 
-    public <T extends AbstractController> void createController(String s) {
+    private  <T extends AbstractController> void createController(String s) {
 
         T controller;
         FXMLLoader fxmlLoader = new FXMLLoader();
@@ -81,18 +95,7 @@ public class Main extends Application {
         controller.setCurrentStage(stage);
         Parent root = fxmlLoader.getRoot();
 
-        Scene scene;
-        if (controller instanceof ExceptionMessageController) {
-            scene = new Scene(root, 274, 183);
-        } else if (controller instanceof AddWorldController ||
-                controller instanceof ChooseLanguageController ||
-                controller instanceof RestorePasswordController ||
-                controller instanceof SettingsController ||
-                controller instanceof NotificationMessageController) {
-            scene = new Scene(root, 423, 228);
-        } else {
-            scene = new Scene(root, 600, 400);
-        }
+         Scene scene = new Scene(root, controller.getH(), controller.getW());
 
         controller.setCurrentScene(scene);
     }

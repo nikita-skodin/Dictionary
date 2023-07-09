@@ -1,9 +1,8 @@
 package dictionary.chooseLanguageStage;
 
-import dictionary.AbstractController;
+import dictionary.util.AbstractController;
 import dictionary.Main;
 import dictionary.training.TrainingController;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
@@ -21,6 +20,8 @@ public class ChooseLanguageController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(423);
+        setW(228);
         chooseLanguageController = this;
     }
 

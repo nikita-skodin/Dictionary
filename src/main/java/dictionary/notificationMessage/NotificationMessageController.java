@@ -1,6 +1,6 @@
 package dictionary.notificationMessage;
 
-import dictionary.AbstractController;
+import dictionary.util.AbstractController;
 import dictionary.Main;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,6 +19,8 @@ public class NotificationMessageController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(423);
+        setW(228);
         notificationMessageController = this;
     }
 

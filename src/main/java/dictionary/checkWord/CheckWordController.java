@@ -3,14 +3,12 @@ package dictionary.checkWord;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import dictionary.AbstractController;
+import dictionary.util.AbstractController;
 import dictionary.mainMenuScene.MainMenuController;
 import dictionary.training.TrainingController;
 import javafx.animation.PauseTransition;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.KeyEvent;
 import javafx.util.Duration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +23,8 @@ public class CheckWordController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(600);
+        setW(400);
         checkWordController = this;
     }
 

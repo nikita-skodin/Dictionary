@@ -3,8 +3,8 @@ package dictionary.mainMenuScene;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-import dictionary.AbstractController;
-import dictionary.User;
+import dictionary.util.AbstractController;
+import dictionary.util.User;
 import dictionary.chooseLanguageStage.ChooseLanguageController;
 import dictionary.logInScene.LogInController;
 import dictionary.settings.SettingsController;
@@ -23,6 +23,8 @@ public class MainMenuController extends AbstractController {
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();
         }
+        setH(600);
+        setW(400);
         mainMenuController = this;
     }
 
