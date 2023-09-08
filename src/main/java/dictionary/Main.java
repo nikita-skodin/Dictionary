@@ -33,7 +33,7 @@ public class Main extends Application {
         this.stage = stage;
 
         setStageOptions(stage, "Dictionary");
-        loadControllers(Paths.get("C:\\Users\\dmitr\\Desktop\\mainjavaprojects\\FXtest5\\src\\main\\java\\dictionary"));
+        loadControllers(Paths.get("src\\main\\java\\dictionary"));
 
         LogInController.showScene();
     }

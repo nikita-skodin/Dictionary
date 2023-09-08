@@ -1,12 +1,9 @@
 package dictionary.addWordStage;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import dictionary.util.AbstractController;
 import dictionary.Main;
-import dictionary.util.User;
 import dictionary.exceptionMessageStage.ExceptionMessageController;
+import dictionary.util.AbstractController;
+import dictionary.util.User;
 import dictionary.vocabularyScene.VocabularyController;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -16,12 +13,13 @@ import javafx.stage.Stage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class AddWorldController extends AbstractController {
+import java.net.URL;
+import java.util.ResourceBundle;
 
+public class AddWorldController extends AbstractController {
     private static final Logger LOGGER = LoggerFactory.getLogger(AddWorldController.class);
     private static AddWorldController addWorldController;
     public AddWorldController() {
-
         if (addWorldController != null){
             LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
             throw new RuntimeException();

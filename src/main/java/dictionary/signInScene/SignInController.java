@@ -17,14 +17,16 @@ import org.slf4j.LoggerFactory;
 public class SignInController extends AbstractController {
     private static final Logger LOGGER = LoggerFactory.getLogger(SignInController.class);
     private static SignInController signInController;
+
+
     public SignInController() {
-        if (signInController != null) {
-            LOGGER.error("Attempt to create " + this.getClass().getSimpleName() + "a second time");
-            throw new RuntimeException();
-        }
+
+        check(signInController, LOGGER);
         setH(600);
         setW(400);
         signInController = this;
+//        System.out.println(signInController);
+//        signInController = (SignInController) AbstractController.init(this, 600, 400, LOGGER);
     }
 
     @FXML
@@ -112,4 +114,16 @@ public class SignInController extends AbstractController {
         }
     }
 
+    @Override
+    public String toString() {
+        return "SignInController{" +
+                "resources=" + resources +
+                ", location=" + location +
+                ", mailField=" + mailField +
+                ", buttonLogIn=" + buttonLogIn +
+                ", buttonSignIn=" + buttonSignIn +
+                ", passwordField=" + passwordField +
+                ", usernameField=" + usernameField +
+                '}';
+    }
 }

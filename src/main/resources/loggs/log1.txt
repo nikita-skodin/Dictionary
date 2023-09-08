@@ -533,3 +533,62 @@
 2023-07-09 17:09:48.277 [main] INFO  dictionary.Main - main method was done
 2023-07-09 17:10:12.863 [main] INFO  dictionary.Main - main method was starting
 2023-07-09 17:10:23.629 [main] INFO  dictionary.Main - main method was done
+2023-07-09 17:46:16.815 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:46:17.411 [JavaFX Application Thread] ERROR dictionary.signInScene.SignInController - Attempt to create SignInControllera second time
+2023-07-09 17:46:17.423 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/signInScene/signIn.fxml:10
+
+2023-07-09 17:49:41.333 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:49:41.980 [JavaFX Application Thread] ERROR dictionary.signInScene.SignInController - Attempt to create SignInControllera second time
+2023-07-09 17:49:41.982 [JavaFX Application Thread] ERROR dictionary.Main - URL or path to FXML is not found, application was close, message is: 
+/C:/Users/dmitr/Desktop/mainjavaprojects/FXtest5/src/main/java/dictionary/signInScene/signIn.fxml:10
+
+2023-07-09 17:51:42.062 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:52:00.843 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:52:06.972 [main] INFO  dictionary.Main - main method was done
+2023-07-09 17:55:23.623 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:55:26.500 [main] INFO  dictionary.Main - main method was done
+2023-07-09 17:55:35.045 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:55:48.323 [main] INFO  dictionary.Main - main method was done
+2023-07-09 17:56:53.341 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:56:56.273 [main] INFO  dictionary.Main - main method was done
+2023-07-09 17:57:24.205 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:57:29.508 [JavaFX Application Thread] ERROR dictionary.signInScene.SignInController - Attempt to create SignInControllera second time
+2023-07-09 17:57:31.632 [main] INFO  dictionary.Main - main method was done
+2023-07-09 17:57:47.608 [main] INFO  dictionary.Main - main method was starting
+2023-07-09 17:57:56.308 [main] INFO  dictionary.Main - main method was done
+2023-07-18 15:29:57.991 [main] INFO  dictionary.Main - main method was starting
+2023-07-18 15:30:15.235 [main] INFO  dictionary.Main - main method was done
+2023-07-18 15:30:53.512 [main] INFO  dictionary.Main - main method was starting
+2023-07-18 15:30:56.623 [main] INFO  dictionary.Main - main method was done
+2023-07-21 16:28:04.109 [main] INFO  dictionary.Main - main method was starting
+2023-07-21 16:28:08.994 [JavaFX Application Thread] INFO  dictionary.util.User - Attempt to get user was fail
+2023-07-21 16:28:30.625 [main] INFO  dictionary.Main - main method was done
+2023-07-27 23:20:35.773 [main] INFO  dictionary.Main - main method was starting
+2023-07-27 23:20:41.028 [main] INFO  dictionary.Main - main method was done
+2023-07-28 12:38:14.341 [main] INFO  dictionary.Main - main method was starting
+2023-07-28 12:39:48.723 [main] INFO  dictionary.Main - main method was done
+2023-09-07 16:16:10.301 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 16:24:23.470 [main] INFO  dictionary.Main - main method was done
+2023-09-07 16:24:41.606 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 16:24:52.746 [main] INFO  dictionary.Main - main method was done
+2023-09-07 16:25:39.701 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 16:25:53.946 [main] INFO  dictionary.Main - main method was done
+2023-09-07 16:30:45.479 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 16:31:00.875 [main] INFO  dictionary.Main - main method was done
+2023-09-07 16:33:26.962 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 16:36:34.535 [main] INFO  dictionary.Main - main method was done
+2023-09-07 17:09:23.710 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 17:09:33.636 [main] INFO  dictionary.Main - main method was done
+2023-09-07 17:09:37.866 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 17:10:15.177 [main] INFO  dictionary.Main - main method was done
+2023-09-07 17:10:33.259 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 17:11:11.307 [main] INFO  dictionary.Main - main method was done
+2023-09-07 17:22:15.926 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 20:09:19.877 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 20:09:22.026 [main] INFO  dictionary.Main - main method was done
+2023-09-07 20:10:09.933 [main] INFO  dictionary.Main - main method was starting
+2023-09-07 20:11:15.301 [main] INFO  dictionary.Main - main method was done
+2023-09-08 10:00:57.532 [main] INFO  dictionary.Main - main method was starting
+2023-09-08 10:02:13.894 [JavaFX Application Thread] INFO  dictionary.util.User - Attempt to get user was fail
+2023-09-08 10:03:41.700 [main] INFO  dictionary.Main - main method was done

@@ -2,6 +2,7 @@ package dictionary.util;
 
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
 
 public abstract class AbstractController {
     protected int w;
@@ -9,9 +10,12 @@ public abstract class AbstractController {
     protected static Stage currentStage;
     protected Scene currentScene;
 
-    protected static AbstractController init(){
+    public static void check(AbstractController abstractController, Logger logger){
 
-        return null;
+        if (abstractController != null) {
+            logger.error("Attempt to create " + abstractController.getClass().getSimpleName() + "a second time");
+            throw new RuntimeException();
+        }
     }
 
     public int getW() {
