@@ -1,12 +1,6 @@
 package dictionary;
 
-import dictionary.addWordStage.AddWorldController;
-import dictionary.chooseLanguageStage.ChooseLanguageController;
-import dictionary.exceptionMessageStage.ExceptionMessageController;
 import dictionary.logInScene.LogInController;
-import dictionary.notificationMessage.NotificationMessageController;
-import dictionary.restorePassword.RestorePasswordController;
-import dictionary.settings.SettingsController;
 import dictionary.util.AbstractController;
 import dictionary.util.User;
 import javafx.application.Application;
@@ -15,14 +9,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
-
-import org.slf4j.*;
 
 public class Main extends Application {
     private static final Logger LOGGER = LoggerFactory.getLogger(Main.class);
